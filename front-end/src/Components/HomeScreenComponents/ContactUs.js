@@ -27,21 +27,21 @@ export default function ContactUs() {
         "https://www.notion.so/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F312b1033-01d7-4b1c-a075-64ca0c79b05c%2FOlayinka_Fakanbi.jpg?id=a5b8ac40-ed54-464d-9702-7dd5c24a0e22&table=block&spaceId=e2735e9b-8fe9-4c16-bdc1-be142cd1014e&width=2000&userId=1c56301b-4ffe-419f-b2c0-5424d42c657c&cache=v2",
       github: "https://github.com/Olayinka19",
       linkedin: "http://linkedin.com/in/olayinka-fakanbi-2a46a6229",
+      codetrack:"https://pursuit.codetrack.dev/fellow/263"
     },
   ];
   return (
     <>
+      {/* <br />
+      <br /> */}
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <Container align="center" sx={{ p: '5%' }}>
+      <Container align="center" sx={{ p: '4%' }}>
         <br />
-        <h3> Contact Us </h3>
-        <p>Got something you want to talk about? Contact us or email us and we promise to get back to you as soon as we can.</p>
+        <h3> Contact Me </h3>
+        <h6>Got something you want to talk about? Contact or email me and I promise to get back to you as soon as we can.</h6>
       </Container>
-
       <Container sx={{ px: "5%" }}>
         <ContactDevCards />
       </Container>

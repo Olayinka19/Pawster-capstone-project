@@ -1,19 +1,23 @@
 import React from "react";
 import { Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-// import { Googlebutton } from 'react-google-button'
 import { UserAuth } from "../../Context/AuthContext";
-// import Account from '../HomeScreenComponents/Account';
 import logo from "../../assets/transparent_logo.png";
 import "./NavBar.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DropdownButton from "react-bootstrap/DropdownButton";
+// import useMediaQuery from '@mui/material/useMediaQuery';
+// import { useTheme } from '@mui/material/styles';
+
+
 
 export default function NavBar() {
   // let shelterPath = window.location.pathname.includes("/shelter");
   // let userPath = window.location.pathname.includes("/user");
   let currentWindow = window.location.pathname;
+
+
 
   // let pawsterHomePageVal = `${window.location.pathname.split("/")[1]}/${
   //   window.location.pathname.split("/")[2]
@@ -25,7 +29,7 @@ export default function NavBar() {
   const sections = [
     { title: "About", url: "/about" },
     { title: "Support", url: "/support" },
-    { title: "Contact Us", url: "/contactUs" },
+    { title: "Developer", url: "/contactUs" },
   ];
 
   const handleSignOut = async () => {

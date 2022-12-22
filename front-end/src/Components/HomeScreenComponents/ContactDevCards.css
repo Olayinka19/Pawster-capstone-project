@@ -1,4 +1,9 @@
 .profileCard-Img {
     width: 100%;
     height: auto;
+    border-radius: 50%;
+    overflow: hidden;
 }
+/* .card-profile {
+    margin-left: 450px;
+} */
