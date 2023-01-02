@@ -27,8 +27,8 @@
 }
 
 .NavBar-logo {
-  width: 90px;
-  height: 80px;
+  width: 200px;
+  height: 120px;
 }
 
 .NavBar-sections {
@@ -40,6 +40,14 @@
 
 .NavBar-sections > a {
   color: white !important;
+}
+.profile{
+  display: flex;
+  justify-content: space-between;
+  color:white;
+  padding-top: 20px;
+  /* font-weight: 300; */
+  font-size: 23px;
 }
 
 .NavBar-dropdown1 {

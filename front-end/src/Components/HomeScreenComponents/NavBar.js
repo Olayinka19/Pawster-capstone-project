@@ -107,24 +107,7 @@ export default function NavBar() {
 
         {/* Logic to hide bottom navBar when we are on other pages that aren't 'Home', such as '/user' or 'shelter'*/}
         <div className="NavBar-sections">
-        <DropDown>
-        <Dropdown.Toggle variant="primary" id="dropdown-basic">Menu
         
-        </Dropdown.Toggle>
-        <Dropdown.Menu>
-        <DropDown.Item href="/about">
-          About
-        </DropDown.Item>
-        <DropDown.Item href="/support">
-          Support
-        </DropDown.Item>
-        {/* <DropDown.Item href="/shelterForm">
-          ShelterForm
-        </DropDown.Item> */}
-        <DropDown.Item href="/contactUs">
-          Dev
-        </DropDown.Item>
-        </Dropdown.Menu>
         
           {sections.map((section) => (
             <Link
@@ -142,7 +125,7 @@ export default function NavBar() {
           ))} 
           
           
-              </DropDown>
+              
         </div>
 
         <div className="NavBar-user-info">
@@ -156,7 +139,7 @@ export default function NavBar() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-        Profile
+      <span className="profile">{user?.displayName}</span>
       </Button>
 
       <Menu
