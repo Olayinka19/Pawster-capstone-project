@@ -13,7 +13,7 @@ import AboutPage from './Components/HomeScreenComponents/AboutPage';
 import ContactUs from './Components/HomeScreenComponents/ContactUs';
 import Feed from './Components/HomeScreenComponents/Feed';
 import Support from './Components/HomeScreenComponents/Support';
-
+// import ShelterStartingPage from './Components/HomeScreenComponents/';
 // Shelter Route
 import ShelterStartingScreen from './Pages/ShelterStartingScreen';
 
@@ -43,7 +43,7 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/support" element={<Support />} />
                 <Route path='/contactUs' element={<ContactUs />} />
-                
+                <Route path='/chats' element={<Chats />} />
                 
                 <Route path="/login" element={<Login />} />
               

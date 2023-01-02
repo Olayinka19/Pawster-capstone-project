@@ -49,6 +49,20 @@ export default function PetCards({ pet, index, id , randomIndex }) {
 
                 {/* Collapsable Info  */}
                 <Collapse in={expandedId === index} timeout="auto" unmountOnExit>
+Costa Rica , Ragdoll
+ChiChi , Mixed Breed
+Rubble , Domestic Short Hair
+Tarzan , Domestic Short Hair
+Lola , Boxer
+Rookie , Domestic Short Hair
+SIREN , Bengal
+Fiona , Shiba Inu
+Mae , Great Pyreneesico
+KIWI , Pit Bull Terrier
+Fran , Tortoiseshell
+SCHWEETZ , Calico
+Cranberry , Domestic Short Hair
+Blanche , Shiba Inu
                     <CardContent>
                         <List>
                             <ListItem divider={true}><ListItemText fontSize="small">Breed: {pet.breed}</ListItemText></ListItem>

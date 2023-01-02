@@ -3,6 +3,8 @@
     height: auto;
     border-radius: 50%;
     overflow: hidden;
+    text-align: center;
+
 }
 /* .card-profile {
     margin-left: 450px;

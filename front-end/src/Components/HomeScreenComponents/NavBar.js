@@ -7,8 +7,16 @@ import "./NavBar.css";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
 import DropdownButton from "react-bootstrap/DropdownButton";
-// import useMediaQuery from '@mui/material/useMediaQuery';
-// import { useTheme } from '@mui/material/styles';
+import DropDown from "react-bootstrap/DropDown";
+import AboutPage from "./AboutPage";
+import Support from "./Support";
+import ContactUs from "./ContactUs";
+import Button from '@mui/material/Button';
+import Menu from '@mui/material/Menu';
+import MenuItem from '@mui/material/MenuItem';
+import Fade from '@mui/material/Fade';
+
+
 
 
 
@@ -16,7 +24,14 @@ export default function NavBar() {
   // let shelterPath = window.location.pathname.includes("/shelter");
   // let userPath = window.location.pathname.includes("/user");
   let currentWindow = window.location.pathname;
-
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
 
   // let pawsterHomePageVal = `${window.location.pathname.split("/")[1]}/${
@@ -29,8 +44,12 @@ export default function NavBar() {
   const sections = [
     { title: "About", url: "/about" },
     { title: "Support", url: "/support" },
-    { title: "Developer", url: "/contactUs" },
+    { title: "Dev", url: "/contactUs" },
+    
+    // { title: "shelters", url: "/contactUs" },
+    // { title: "Form", url: "/form" },
   ];
+// The item Height
 
   const handleSignOut = async () => {
     try {
@@ -63,18 +82,50 @@ export default function NavBar() {
 
   // if (currentWindow = "/")
   // {console.log(currentWindow)}
-
+// ------>Menu Icon ------>
+  // const ITEM_HEIGHT = 48;
+//  const [anchorE1, setAnchorE1] = React.useState(null);
+//  const open = Boolean(anchorE1);
+//  const handleClick = (event) => {
+//    setAnchorE1(event.currentTarget);
+//  };
+//  const handleClose = () => {
+//    setAnchorE1(null);
+//  };
   if (currentWindow === "/") {
     return (
       // <div className="NavBar-overall-Div">
+      
       <div className="custom-navbar">
+        
         {/* Logic to return to the proper home path, whether it is '/user' or 'shelter'*/}
+        
+      
         <Link href="/" underline="none">
           <img className="NavBar-logo" src={logo} alt={'logo'}/>
         </Link>
 
         {/* Logic to hide bottom navBar when we are on other pages that aren't 'Home', such as '/user' or 'shelter'*/}
         <div className="NavBar-sections">
+        <DropDown>
+        <Dropdown.Toggle variant="primary" id="dropdown-basic">Menu
+        
+        </Dropdown.Toggle>
+        <Dropdown.Menu>
+        <DropDown.Item href="/about">
+          About
+        </DropDown.Item>
+        <DropDown.Item href="/support">
+          Support
+        </DropDown.Item>
+        {/* <DropDown.Item href="/shelterForm">
+          ShelterForm
+        </DropDown.Item> */}
+        <DropDown.Item href="/contactUs">
+          Dev
+        </DropDown.Item>
+        </Dropdown.Menu>
+        
           {sections.map((section) => (
             <Link
               underline="none"
@@ -83,15 +134,68 @@ export default function NavBar() {
               href={section.url}
               sx={{ p: 1, flexShrink: 0 }}
             >
-              {section.title}
+            <div>
+            </div>
+            
+              {/* {section.title} */}
             </Link>
-          ))}
+          ))} 
+          
+          
+              </DropDown>
         </div>
 
         <div className="NavBar-user-info">
           {" "}
           {/* start of the dropdown menus */}
           {/* ======end of the new dropdown */}
+          <Button
+        id="fade-button"
+        aria-controls={open ? 'fade-menu' : undefined}
+        aria-haspopup="true"
+        aria-expanded={open ? 'true' : undefined}
+        onClick={handleClick}
+      >
+        Profile
+      </Button>
+
+      <Menu
+        id="fade-menu"
+        MenuListProps={{
+          'aria-labelledby': 'fade-button',
+        }}
+        anchorEl={anchorEl}
+        open={open}
+        onClose={handleClose}
+        TransitionComponent={Fade}
+      >
+        
+          <MenuItem onClick={handleClose}><DropDown.Item href="/about">
+          About
+        </DropDown.Item></MenuItem>
+        <MenuItem onClick={handleClose}><DropDown.Item href="/about">
+          Support
+        </DropDown.Item></MenuItem>
+        <MenuItem onClick={handleClose}><DropDown.Item href="/about">
+          Developer
+        </DropDown.Item></MenuItem>
+        <MenuItem onClick={handleClose}><DropDown.Item href="/about">
+          SheltersPage
+        </DropDown.Item></MenuItem>
+        <MenuItem onClick={handleClose}>{user?.displayName ? (
+              <button className="NavBar-login-button2" onClick={handleSignOut}>
+                Logout
+              </button>
+            ) : (
+              <button
+                className="NavBar-login-button2"
+                onClick={handleGoogleSignIn}
+              >
+                Log In
+              </button>
+            )}</MenuItem>
+        
+      </Menu>
           {user?.displayName ? (
             <img
               width="45px"
@@ -109,7 +213,7 @@ export default function NavBar() {
             </button>
           )} */}
           <div className="NavBar-signin">
-            {user?.displayName ? (
+            {/* {user?.displayName ? (
               <button className="NavBar-login-button2" onClick={handleSignOut}>
                 Logout
               </button>
@@ -120,7 +224,7 @@ export default function NavBar() {
               >
                 Log In
               </button>
-            )}
+            )} */}
           </div>
         </div>
       </div>
@@ -182,9 +286,12 @@ export default function NavBar() {
                 Log in
               </button>
             )}
+            
           </div>
         </div>
+        
       </div>
+
     );
   }
 }

@@ -50,7 +50,7 @@ export default function ContactDevCards() {
     ]
 
     return (
-        <Grid sx={{ display: 'grid', gridTemplateColumns: 'repeat(1, 1fr)' }}>
+        <Grid sx={{ display: 'grid', gridTemplateColumns: 'repeat(1, 2fr)' }}>
             {developers.map(person => CardFormat(person))}
         </Grid>
     )

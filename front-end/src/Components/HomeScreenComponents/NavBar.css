@@ -27,8 +27,8 @@
 }
 
 .NavBar-logo {
-  width: 250px;
-  height: 100px;
+  width: 90px;
+  height: 80px;
 }
 
 .NavBar-sections {
@@ -62,7 +62,7 @@
 .NavBar-overall-Div {
   width: 100vw;
   position: absolute;
-  /* height: 50vh; */
+  height: 50vh;
 }
 
 .NavBar-sections2 > a {
