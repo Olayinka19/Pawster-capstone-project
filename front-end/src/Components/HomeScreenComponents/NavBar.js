@@ -15,6 +15,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
+import MenuIcon from '@mui/icons-material/Menu';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
@@ -141,7 +142,8 @@ export default function NavBar() {
       >
       {/* <span className="profile">{user?.displayName}</span> */}
       {/* <h2>Profile</h2> */}
-     < MoreVertIcon className="mot" />
+     {/* < MoreVertIcon /> */}
+     <MenuIcon className="mot"  />
       </Button>
 
       <Menu
