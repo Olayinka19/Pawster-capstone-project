@@ -15,7 +15,7 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
-
+import MoreVertIcon from '@mui/icons-material/MoreVert';
 
 
 
@@ -140,7 +140,8 @@ export default function NavBar() {
         onClick={handleClick}
       >
       {/* <span className="profile">{user?.displayName}</span> */}
-      <h2>Profile</h2>
+      {/* <h2>Profile</h2> */}
+     < MoreVertIcon className="mot" />
       </Button>
 
       <Menu
