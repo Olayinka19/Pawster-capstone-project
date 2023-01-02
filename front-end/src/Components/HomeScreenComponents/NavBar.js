@@ -139,7 +139,8 @@ export default function NavBar() {
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
       >
-      <span className="profile">{user?.displayName}</span>
+      {/* <span className="profile">{user?.displayName}</span> */}
+      <h2>Profile</h2>
       </Button>
 
       <Menu
@@ -165,7 +166,7 @@ export default function NavBar() {
         <MenuItem onClick={handleClose}><DropDown.Item href="/about">
           SheltersPage
         </DropDown.Item></MenuItem>
-        <MenuItem onClick={handleClose}>{user?.displayName ? (
+        {user?.displayName ? (
               <button className="NavBar-login-button2" onClick={handleSignOut}>
                 Logout
               </button>
@@ -176,7 +177,7 @@ export default function NavBar() {
               >
                 Log In
               </button>
-            )}</MenuItem>
+            )}
         
       </Menu>
           {user?.displayName ? (

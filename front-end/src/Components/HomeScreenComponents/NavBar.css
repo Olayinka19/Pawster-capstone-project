@@ -42,14 +42,20 @@
   color: white !important;
 }
 .profile{
-  display: flex;
-  justify-content: space-between;
+  /* display: flex; */
+  /* justify-content: space-between; */
   color:white;
   padding-top: 20px;
-  /* font-weight: 300; */
+  font-weight: 300;
   font-size: 23px;
 }
-
+h2 {
+  color: white !important;
+  font-weight: 300;
+  font-size: 23px;
+  /* padding-top: 20px; */
+  
+}
 .NavBar-dropdown1 {
   z-index: 23333;
 }
