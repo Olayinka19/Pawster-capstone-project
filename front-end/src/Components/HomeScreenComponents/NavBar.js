@@ -1,56 +1,55 @@
-import React from "react";
-import { Link } from "@mui/material";
+// import React from "react";
+import React, { useState } from "react";
+// import { Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../../Context/AuthContext";
 import logo from "../../assets/transparent_logo.png";
 import "./NavBar.css";
+
+import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import { NavDropdown } from "react-bootstrap";
+import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
-import DropdownButton from "react-bootstrap/DropdownButton";
-import DropDown from "react-bootstrap/DropDown";
+// import DropdownButton from "react-bootstrap/DropdownButton";
+// import DropDown from "react-bootstrap/DropDown";
 import AboutPage from "./AboutPage";
-import Support from "./Support";
+// import Support from "./Support";
 import ContactUs from "./ContactUs";
-import Button from '@mui/material/Button';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import Fade from '@mui/material/Fade';
-import MenuIcon from '@mui/icons-material/Menu';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+import { Offcanvas } from "react-bootstrap";
+import Button from "@mui/material/Button";
+import ContactForm from "./ContactForm";
+// import PetForm from "../Forms/PetForm"
+// import UserForm from "../Forms/UserForm"
 
 
-
-
-export default function NavBar() {
+function NavBar() {
   // let shelterPath = window.location.pathname.includes("/shelter");
   // let userPath = window.location.pathname.includes("/user");
-  let currentWindow = window.location.pathname;
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
 
+  // let currentWindow = window.location.pathname;
 
   // let pawsterHomePageVal = `${window.location.pathname.split("/")[1]}/${
   //   window.location.pathname.split("/")[2]
   // }`;
 
   const { logOut, user, googleSignIn } = UserAuth();
+  // const [searchTerm , setSearchTerm] = useState("");
+  
+
   let navigate = useNavigate();
 
-  const sections = [
-    { title: "About", url: "/about" },
-    { title: "Support", url: "/support" },
-    { title: "Dev", url: "/contactUs" },
-    
-    // { title: "shelters", url: "/contactUs" },
-    // { title: "Form", url: "/form" },
-  ];
-// The item Height
+  // const sections = [
+  //   { title: "About", url: "/about" },
+  //   { title: "Support", url: "/support" },
+  //   { title: "Dev", url: "/contactUs" },
+  //   { title: "Form", url: "/form" },
+
+  //   // { title: "shelters", url: "/contactUs" },
+  // ];
+  // The item Height
 
   const handleSignOut = async () => {
     try {
@@ -62,6 +61,11 @@ export default function NavBar() {
       console.log(err);
     }
   };
+
+//   function handleSearch(e) {
+//  e.preventDefault();
+//  window.location.replace(`https://pawster.onrender.com/pets/search?q=${searchTerm}`)
+//   }
   const handleGoogleSignIn = async () => {
     alert("You will be redirected to log in");
     try {
@@ -73,212 +77,115 @@ export default function NavBar() {
     }
   };
 
-  // const loggedInTitle = () => {
-  //   return (
-  //     <Link href={`/${pawsterHomePageVal}`} underline="none">
-  //       <h2>Pawster</h2>
-  //     </Link>
-  //   );
-  // };
-
-  // if (currentWindow = "/")
-  // {console.log(currentWindow)}
-// ------>Menu Icon ------>
-  // const ITEM_HEIGHT = 48;
-//  const [anchorE1, setAnchorE1] = React.useState(null);
-//  const open = Boolean(anchorE1);
-//  const handleClick = (event) => {
-//    setAnchorE1(event.currentTarget);
-//  };
-//  const handleClose = () => {
-//    setAnchorE1(null);
-//  };
-  if (currentWindow === "/") {
     return (
-      // <div className="NavBar-overall-Div">
-      
-      <div className="custom-navbar">
-        
-        {/* Logic to return to the proper home path, whether it is '/user' or 'shelter'*/}
-        
-      
-        <Link href="/" underline="none">
-          <img className="NavBar-logo" src={logo} alt={'logo'}/>
-        </Link>
 
-        {/* Logic to hide bottom navBar when we are on other pages that aren't 'Home', such as '/user' or 'shelter'*/}
-        <div className="NavBar-sections">
+      <>
+    {[false].map((expand) => (
+        <Navbar key={expand} bg="primary" expand={expand} className="mb-3">
+          <Container fluid>
+          <Navbar.Brand>
+       
+        <Nav.Link href="/" underline="none">
+          <img className="NavBar-logo" src={logo} alt={"logo"} />
+        </Nav.Link>
+        </Navbar.Brand>
+
+      
         
-        
-          {sections.map((section) => (
-            <Link
+        <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
+            <Navbar.Offcanvas
+              id={`offcanvasNavbar-expand-${expand}`}
+              aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
+              placement="end"
+            >
+        <Offcanvas.Header closeButton>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                  Categories
+                </Offcanvas.Title>
+              </Offcanvas.Header>
+              <Offcanvas.Body>
+              
+                <Nav className="justify-content-end flex-grow-1 pe-3">
+                <Nav.Link href="user/1/explore">
+                  Explore
+                </Nav.Link>
+                <Nav.Link href="/About">About
+          {/* {sections.map((section) => (
+            <Nav.Link>
               underline="none"
               noWrap
               key={section.title}
               href={section.url}
               sx={{ p: 1, flexShrink: 0 }}
-            >
-            <div>
-            </div>
-            
-              {/* {section.title} */}
-            </Link>
-          ))} 
-          
           
               
-        </div>
 
-        <div className="NavBar-user-info">
-          {" "}
-          {/* start of the dropdown menus */}
-          {/* ======end of the new dropdown */}
-          <Button
-        id="fade-button"
-        aria-controls={open ? 'fade-menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-      >
-      {/* <span className="profile">{user?.displayName}</span> */}
-      {/* <h2>Profile</h2> */}
-     {/* < MoreVertIcon /> */}
-     <MenuIcon className="mot"  />
-      </Button>
-
-      <Menu
-        id="fade-menu"
-        MenuListProps={{
-          'aria-labelledby': 'fade-button',
-        }}
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        TransitionComponent={Fade}
-      >
+              {section.title} */}
+            </Nav.Link>
+            <Nav.Link href="/Support">Support
+            </Nav.Link>
+            <Nav.Link href="/ContactUs">Developer</Nav.Link>
+            <Nav.Link href="/Account">Account</Nav.Link>
+            <Nav.Link href="/contactForm">ContactForm</Nav.Link>
+            <Nav.Link href="/petForm">PetForm</Nav.Link>
+            <Nav.Link href="/userForm">UserForm</Nav.Link>
+            {/* <Nav.Link href="/shelterForm">ShelterForm</Nav.Link> */}
+          
         
-          <MenuItem onClick={handleClose}><DropDown.Item href="/about">
-          About
-        </DropDown.Item></MenuItem>
-        <MenuItem onClick={handleClose}><DropDown.Item href="/about">
-          Support
-        </DropDown.Item></MenuItem>
-        <MenuItem onClick={handleClose}><DropDown.Item href="/about">
-          Developer
-        </DropDown.Item></MenuItem>
-        <MenuItem onClick={handleClose}><DropDown.Item href="/about">
-          SheltersPage
-        </DropDown.Item></MenuItem>
-        {user?.displayName ? (
-              <button className="NavBar-login-button2" onClick={handleSignOut}>
-                Logout
-              </button>
-            ) : (
-              <button
-                className="NavBar-login-button2"
-                onClick={handleGoogleSignIn}
-              >
-                Log In
-              </button>
-            )}
-        
-      </Menu>
+        <NavDropdown
+                    title="Dropdown"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                  <NavDropdown.Item>
           {user?.displayName ? (
             <img
               width="45px"
               height="45px"
               style={{ marginRight: "20px", borderRadius: "25px" }}
-              alt='user-img'
+              alt="user-img"
               src={user?.photoURL}
             />
           ) : null}
-          {/* {!user?.displayName ? null : (
-            <button className="NavBar-login-button2">
-              <Link className="NavBar-login-button2" href="/user/1/explore">
-                Explore
-              </Link>
+          </NavDropdown.Item>
+          <NavDropdown.Divider />
+          
+          <NavDropdown.Item>
+
+          {user?.displayName ? (
+            <button className="NavBar-login-button2" onClick={handleSignOut}>
+              Logout
             </button>
-          )} */}
-          <div className="NavBar-signin">
-            {/* {user?.displayName ? (
-              <button className="NavBar-login-button2" onClick={handleSignOut}>
-                Logout
-              </button>
-            ) : (
-              <button
-                className="NavBar-login-button2"
-                onClick={handleGoogleSignIn}
-              >
-                Log In
-              </button>
-            )} */}
-          </div>
-        </div>
-      </div>
-      // </div>
-    );
-  } else {
-    return (
-      // <div className="NavBar-overall-Div">
-      <div className="custom-navbar2">
-        {/* Logic to return to the proper home path, whether it is '/user' or 'shelter'*/}
-        <Link href="/" underline="none">
-          <img className="NavBar-logo2" src={logo} alt='navbar-logo-2' />
-        </Link>
-
-        {/* Logic to hide bottom navBar when we are on other pages that aren't 'Home', such as '/user' or 'shelter'*/}
-        <div className="NavBar-sections2">
-          {sections.map((section) => (
-            <Link
-              underline="none"
-              noWrap
-              key={section.title}
-              href={section.url}
-              sx={{ p: 1, flexShrink: 0 }}
+          ) : (
+            <button
+              className="NavBar-login-button2"
+              onClick={handleGoogleSignIn}
             >
-              {section.title}
-            </Link>
-          ))}
-        </div>
-
-        <div className="NavBar-user-info2">
-          {user?.displayName ? (
-            <img
-              width="45px"
-              height="45px"
-              style={{ marginRight: "20px", borderRadius: "25px" }}
-              src={user?.photoURL}
-              alt='user-img-2'
-            />
-          ) : null}
-
-          {!user?.displayName ?  null : (
-            <button className="NavBar-login-button2">
-              <Link className="NavBar-login-button2" href="/user/1/explore">
-                Explore
-              </Link>
+              Log In
             </button>
           )}
-          
-          <div className="NavBar-signin2">
-            {user?.displayName ? (
-              <button className="NavBar-login-button2" onClick={handleSignOut}>
-                Logout
-              </button>
-            ) : (
-              <button
-                className="NavBar-login-button2"
-                onClick={handleGoogleSignIn}
-              >
-                Log in
-              </button>
-            )}
-            
-          </div>
-        </div>
-        
-      </div>
-
-    );
-  }
-}
+          </NavDropdown.Item>
+          </NavDropdown>
+          </Nav>
+          <Form className="d-flex">
+                  <Form.Control
+                    type="search"
+                    placeholder="Search"
+                    className="me-2"
+                    // aria-label="Search"
+                    
+                    
+                  />
+                  <Button variant="outline-success">Search</Button>
+                </Form>
+                </Offcanvas.Body>
+                </Navbar.Offcanvas>
+                </Container>    
+    </Navbar>
+    ))}
+    </>
+    )
+    }
+    export default  NavBar
+    
+    
+  

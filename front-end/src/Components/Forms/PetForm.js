@@ -1,12 +1,12 @@
 import React from 'react'
 import axios from 'axios';
 import { Grid } from '@material-ui/core';
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import Controls from './controls/Controls';
 import { useForm, Form } from './Form.js';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
-
+import { Button } from 'react-bootstrap';
 import { getPetType, getPetSize, getPetMaintenance, getPetAge, getGenderItems, getYesOrNo, getDeclawedItems, getAdoptionStatus } from "./selectValues/petsSelect"
 
 const API = process.env.REACT_APP_API_URL;
@@ -60,7 +60,7 @@ export default function PetForm() {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Typography variant="h4" align="center" sx={{ pt: 3, fontWeight: "bold" }}>New Pet</Typography>
+            <Button variant="primary" align="center" sx={{ pt: 3, fontWeight: "bold" }}>New Pet</Button>
             <Stack
                 direction="column"
                 alignItems="center"

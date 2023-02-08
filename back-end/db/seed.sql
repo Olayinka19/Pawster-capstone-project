@@ -1,4 +1,4 @@
-\c pets_dev
+\c pets_developer
 
 INSERT INTO users (name, income, age, sex, household_size, residence_type, free_time, preferences, pet_type, address, proof_of_residence, photo_id, proof_pets_allowed, phone_number, email ) 
 VALUES
@@ -14,7 +14,7 @@ INSERT INTO shelters (name, address, business_hours, phone_number, email) VALUES
 ('A Purr-fect Fit Animal Rescue and Adoption Center', '2231 Wehrle Drive, Williamsville, NY 14221', 'M-F 12pm-6pm, Sat 12pm-4pm, Sun CLOSED (Visits by Appt Only)', '716-633-6600', 'apurrfectfit@gmail.com');
 
 INSERT INTO pets (name, type, breed, size, gender, age, color, maintenance_level, spayed_neutered, house_trained, declawed, special_needs, shots_current, description, status, shelter_id, userLiked, image_url, phone_number ) VALUES
-('Costa Rica', 'Cat', 'Ragdoll', 'Medium', 'Female', 'Adult', 'White / Gray', 'Low', true, true, false, false, true, 'EMILIE is a sweet and loving Ragdoll girl.  She loves cats and all people', 'adoptable', 1, false, 'https://dl5zpyw5k3jeb.cloudfront.net/photos/pets/59140976/1/?bust=1670914427', '348-173-3923'),
+('Costa Rica', 'Cat', 'Ragdoll', 'Medium', 'Female', 'Adult', 'White / Gray', 'Low', true, true, false, false, true, 'EMILIE is a sweet and loving Ragdoll girl.  She loves cats and all people', 'adoptable', 1, false, 'https://img.freepik.com/free-photo/adorable-brown-white-basenji-dog-smiling-giving-high-five-isolated-white_346278-1657.jpg?w=2000&t=st=1675849184~exp=1675849784~hmac=2ea9694f79bce30394eb93ac470ff41e07bcf1f4d73aec24de3db5cde38809f8', '348-173-3923'),
 ('ChiChi', 'Dog', 'Mixed Breed', 'Small', 'Female', 'Adult', 'Brown / Chocolate', 'Mid', true, false, null, false, true, 'At first glance, I might appear to have a ruff, set in my ways exterior but once you give me...', 'adoptable', 2, false, 'https://images.unsplash.com/photo-1558947530-cbcf6e9aeeae?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8cGV0c3x8fHx8fDE2NzA1NTM1NjA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=500', '348-173-3123'), 
 ('Rubble', 'Cat', 'Domestic Short Hair', 'Small', 'Male', 'Baby', 'Brown', 'Mid', false, false, false, false, true, null, 'adoptable', 2, false, 'https://images.unsplash.com/photo-1606214174585-fe31582dc6ee?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8cGV0c3x8fHx8fDE2NzA1Njg5MjU&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=500', '348-854-3923'),
 ('Tarzan', 'Cat', 'Domestic Short Hair', 'Small', 'Male', 'Baby', 'Orange / Red', 'Mid',false, false, false, false, true, null, 'adoptable', 2, false, 'https://images.unsplash.com/photo-1548366086-7f1b76106622?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=500&ixid=MnwxfDB8MXxyYW5kb218MHx8cGV0c3x8fHx8fDE2NzA1NjkwMTA&ixlib=rb-4.0.3&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=500', '338-473-3923'),

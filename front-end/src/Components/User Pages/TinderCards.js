@@ -155,7 +155,8 @@ export default function TinderCards({ animals }) {
                 <h3>
                   {animal.name} , {animal.breed}
                 </h3>
-                {/* <p>{animal.description}</p> */}
+                
+              {/* <p>{animal.description}</p> */}
                 {/* <p>{console.log(changeSwipe)}</p> */}
               </div>
             </div>

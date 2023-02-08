@@ -1,10 +1,11 @@
 import React from 'react'
 import axios from 'axios';
 import { Grid } from '@material-ui/core';
-import { Stack, Typography } from '@mui/material';
+import { Stack } from '@mui/material';
 import Controls from './controls/Controls';
 import { useForm, Form } from './Form.js';
 import { useParams, useNavigate } from 'react-router-dom';
+import {Button} from 'react-bootstrap';
 
 import { getPetType, getPetSize, getPetMaintenance, getPetAge, getGenderItems, getYesOrNo, getDeclawedItems, getAdoptionStatus } from "./selectValues/petsSelect"
 
@@ -64,7 +65,7 @@ export default function UserForm() {
 
     return (
         <Form onSubmit={handleSubmit}>
-            <Typography variant="h4" align="center" sx={{ pt: 3, fontWeight:"bold" }}>New User</Typography>
+            <Button variant="primary">New User</Button>
             <Stack
                 direction="column"
                 alignItems="center"

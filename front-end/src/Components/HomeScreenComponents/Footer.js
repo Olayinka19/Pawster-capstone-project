@@ -4,18 +4,13 @@ import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
 
-import InstagramIcon from '@material-ui/icons/Instagram';
-import FacebookIcon from '@material-ui/icons/Facebook';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import GitHubIcon from '@material-ui/icons/GitHub';
 
 
 function Copyright() {
   return (
     <Link underline='none' href="/" sx={{ color: 'black'}}>
       <Typography variant="body2" align="center" fontFamily={'Fraunces'} >
-        {'Copyright © '}
+       Olayinka {'Copyright © '}
         {' '}
         {new Date().getFullYear()}
         {'.'}
@@ -27,26 +22,23 @@ function Copyright() {
 function SocialMedia() {
   return (
     <Typography variant='body2' align='center' >
-      <Link href='/support'>
-        <InstagramIcon/>
-      </Link>
-      {' '}
-      <Link href="https://www.facebook.com/" rel="noopener noreferrer" target="_blank"> 
-        <FacebookIcon />
-      </Link>
-      {' '}
-      <Link href="https://twitter.com/?lang=en" rel="noopener noreferrer" target="_blank">
-        <TwitterIcon />
-      </Link>
-      {' '}
-      <Link href="https://www.linkedin.com/feed/" rel="noopener noreferrer" target="_blank">
-        <LinkedInIcon />
-      </Link>
-      {' '}
-      <Link href='https://github.com/vlopez515/Pawster-capstone-project' rel="noopener noreferrer" target="_blank">
-        <GitHubIcon />
-      </Link>
-      {' '}
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+      <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px" src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png"></img>
+        <i className="fab fa-facebook-square" style={{ fontSize: '24px' }} />
+      </a>
+      <a href="https://twitter.com/i/flow/login" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px" src="https://cdn-icons-png.flaticon.com/512/2504/2504947.png"></img>
+        <i className="fab fa-twitter-square" style={{ fontSize: '24px' }} />
+      </a>
+      <a href="https://www.instagram.com/" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px"  src="https://cdn-icons-png.flaticon.com/512/1409/1409946.png"></img>
+        <i className="fab fa-instagram" style={{ fontSize: '24px' }} />
+      </a>
+      <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px"  src="https://cdn-icons-png.flaticon.com/512/174/174857.png?w=1380&t=st=1675449932~exp=1675450532~hmac=e99e636cce58f116999b10c6f776d9c89d1317339e7f10acc64ec58fe9350a93"></img>
+        <i className="fab fa-linkedin" style={{ fontSize: '24px' }} />
+      </a>
+      <a href="https://github.com/" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px"  src="https://cdn-icons-png.flaticon.com/512/2504/2504911.png"></img>
+        <i className="fab fa-linkedin" style={{ fontSize: '24px' }} />
+      </a>
+    </div>
     </Typography>
   );
 }

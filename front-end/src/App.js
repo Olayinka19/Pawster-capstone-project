@@ -18,6 +18,8 @@ import Support from './Components/HomeScreenComponents/Support';
 import ShelterStartingScreen from './Pages/ShelterStartingScreen';
 
 import UserForm from './Components/Forms/UserForm';
+import PetForm from './Components/Forms/PetForm';
+
 
 
 // User Route
@@ -26,6 +28,7 @@ import UserLikedPets from './Components/User Pages/UserLikedPets';
 import TinderCards from "../src/Components/User Pages/PetFinderAPI/PetFinderAPI"
 import Chats from "../src/Components/User Pages/Chats"
 import ChatScreen from './Components/User Pages/ChatScreen';
+import ContactForm from './Components/HomeScreenComponents/ContactForm';
 
 function App() {
 
@@ -48,6 +51,9 @@ function App() {
                 <Route path="/login" element={<Login />} />
               
                 <Route path='/account' element={<Account/>} />
+                <Route path='/contactForm' element={<ContactForm/>} />
+                <Route path='/userForm' element={<UserForm/>} />
+                <Route path='/petForm' element={<PetForm/>} />
 
               {/* Shelter Routes */}
                 <Route path="/shelter/*" element={ <ShelterStartingScreen />} />

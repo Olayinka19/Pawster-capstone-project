@@ -1,7 +1,7 @@
-DROP DATABASE IF EXISTS pets_dev;
-CREATE DATABASE pets_dev;
+DROP DATABASE IF EXISTS pets_developer;
+CREATE DATABASE pets_developer;
 
-\c pets_dev;
+\c pets_developer;
 
 DROP TABLE IF EXISTS users ;
 

@@ -13,19 +13,19 @@ function Feed() {
 
         <Stack direction="row" spacing={2} align="center">
           <Container>
-            <h2>Who are we ?</h2>
+            <h2>Who am I ?</h2>
             <br />
             <p>
-              We are a group of dedicated individuals, who are passionate about
+              I am a dedicated individuals, who is passionate about
               helping pets currently placed in overpopulated shelters find a
-              home. With our combined knowledge of full stack development, we
+              home. With my combined knowledge of full stack development, we
               created this app in hopes of allowing people interested in
               fostering or adopting, take their first steps!{" "}
             </p>
           </Container>
 
           <Container>
-            <h2>Our Mission</h2>
+            <h2>My Mission</h2>
             <br />
             <p>
               The mission of Pawster is to help facilitate New York City

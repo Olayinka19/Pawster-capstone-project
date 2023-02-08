@@ -10,6 +10,7 @@ import CodeIcon from '@mui/icons-material/Code';
 import CardMedia from '@mui/material/CardMedia';
 function CardFormat(card) {
     return (
+        <div style={{display:'flex', justifyContent:'center'}}>
         <Card sx={{ maxWidth: 280 }} variant="outlined" className="text-center p-4 " align="center">
             <img src={card.photo} className="profileCard-Img" justify="center" >
             </img>
@@ -32,6 +33,7 @@ function CardFormat(card) {
                 </Link>
             </Typography>
         </Card>
+        </div>
     )
 
 }
