@@ -40,7 +40,7 @@ function NavBar() {
       await logOut();
       console.log(user);
       navigate("/");
-      alert("you have logged out");
+      // alert("you have logged out");
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +48,7 @@ function NavBar() {
 
 
   const handleGoogleSignIn = async () => {
-    alert("You will be redirected to log in");
+    // alert("You will be redirected to log in");
     try {
       await googleSignIn();
       console.log(user);

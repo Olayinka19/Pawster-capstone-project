@@ -26,13 +26,13 @@ export default function Login() {
 
 
   useEffect(() => {
-    if (user) {
+    if (!user) {
       console.log(user)
-      navigate("/account")
+      navigate("/login")
     } 
-    // else {
-    //   navigate("/login")
-    // }
+    else if (user) {
+      navigate("/")
+    }
 
   }, [user]);
 
@@ -40,7 +40,7 @@ export default function Login() {
     <div>
 
       <div className='login'>
-        <h3>Log In </h3>
+        <button onClick={handleGoogleSignIn}><GoogleButton/> </button>
         <br></br>
       </div>
 
