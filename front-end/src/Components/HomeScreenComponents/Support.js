@@ -1,3 +1,4 @@
+import React from 'react';
 import QsAccordion from "./QsAccordion"
 import { Container } from '@mui/system'
 

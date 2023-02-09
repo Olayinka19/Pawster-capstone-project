@@ -1,7 +1,7 @@
+import React from "react";
 import { Badge, Grid } from "@mui/material";
 import { useParams } from "react-router-dom";
 import PetCards from "./PetCards"
-
 
 export default function DisplayPets({ pet, index }) {
     const { id } = useParams()

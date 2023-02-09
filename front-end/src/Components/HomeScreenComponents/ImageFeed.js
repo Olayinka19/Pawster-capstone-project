@@ -34,7 +34,7 @@ export default function QuiltedImageList() {
     <div className="outter-div" sx={{ backgroundColor: "black" }}>
       <div className="splash-image">
         <h1>Find the right pet for you</h1>
-        {user?.displayName ? (
+        {user && user.displayName ? (
           <button className="Image-Feed-button">
             <Link to="/user/1/explore">
               <h2>Explore</h2>

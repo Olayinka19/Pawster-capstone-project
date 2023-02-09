@@ -1,6 +1,5 @@
 // import React from "react";
 import React, { useState } from "react";
-// import { Link } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from "../../Context/AuthContext";
 import logo from "../../assets/transparent_logo.png";
@@ -13,43 +12,28 @@ import { NavDropdown } from "react-bootstrap";
 import Form from "react-bootstrap/Form";
 import Dropdown from "react-bootstrap/Dropdown";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import DropdownButton from "react-bootstrap/DropdownButton";
-// import DropDown from "react-bootstrap/DropDown";
+
 import AboutPage from "./AboutPage";
-// import Support from "./Support";
+
 import ContactUs from "./ContactUs";
 import { Offcanvas } from "react-bootstrap";
 import Button from "@mui/material/Button";
 import ContactForm from "./ContactForm";
-// import PetForm from "../Forms/PetForm"
-// import UserForm from "../Forms/UserForm"
+
 
 
 function NavBar() {
-  // let shelterPath = window.location.pathname.includes("/shelter");
-  // let userPath = window.location.pathname.includes("/user");
-
-  // let currentWindow = window.location.pathname;
-
-  // let pawsterHomePageVal = `${window.location.pathname.split("/")[1]}/${
+ 
   //   window.location.pathname.split("/")[2]
   // }`;
 
   const { logOut, user, googleSignIn } = UserAuth();
-  // const [searchTerm , setSearchTerm] = useState("");
+
   
 
   let navigate = useNavigate();
 
-  // const sections = [
-  //   { title: "About", url: "/about" },
-  //   { title: "Support", url: "/support" },
-  //   { title: "Dev", url: "/contactUs" },
-  //   { title: "Form", url: "/form" },
-
-  //   // { title: "shelters", url: "/contactUs" },
-  // ];
-  // The item Height
+ 
 
   const handleSignOut = async () => {
     try {
@@ -62,10 +46,7 @@ function NavBar() {
     }
   };
 
-//   function handleSearch(e) {
-//  e.preventDefault();
-//  window.location.replace(`https://pawster.onrender.com/pets/search?q=${searchTerm}`)
-//   }
+
   const handleGoogleSignIn = async () => {
     alert("You will be redirected to log in");
     try {
@@ -110,17 +91,7 @@ function NavBar() {
                   Explore
                 </Nav.Link>
                 <Nav.Link href="/About">About
-          {/* {sections.map((section) => (
-            <Nav.Link>
-              underline="none"
-              noWrap
-              key={section.title}
-              href={section.url}
-              sx={{ p: 1, flexShrink: 0 }}
           
-              
-
-              {section.title} */}
             </Nav.Link>
             <Nav.Link href="/Support">Support
             </Nav.Link>
@@ -129,7 +100,7 @@ function NavBar() {
             <Nav.Link href="/contactForm">ContactForm</Nav.Link>
             <Nav.Link href="/petForm">PetForm</Nav.Link>
             <Nav.Link href="/userForm">UserForm</Nav.Link>
-            {/* <Nav.Link href="/shelterForm">ShelterForm</Nav.Link> */}
+            
           
         
         <NavDropdown
@@ -137,13 +108,13 @@ function NavBar() {
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
                   <NavDropdown.Item>
-          {user?.displayName ? (
+          {user && user.displayName ? (
             <img
-              width="45px"
-              height="45px"
-              style={{ marginRight: "20px", borderRadius: "25px" }}
+              
+              style={{ marginRight: "20px", borderRadius: "25px", width:"45px" ,
+              height:"45px" }}
               alt="user-img"
-              src={user?.photoURL}
+              src={user && user.photoURL}
             />
           ) : null}
           </NavDropdown.Item>
@@ -151,7 +122,7 @@ function NavBar() {
           
           <NavDropdown.Item>
 
-          {user?.displayName ? (
+          {user && user.displayName ? (
             <button className="NavBar-login-button2" onClick={handleSignOut}>
               Logout
             </button>

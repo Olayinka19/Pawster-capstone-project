@@ -50,7 +50,7 @@ export default function ContactUs() {
       <Stack direction='column' spacing={2} align="center" sx={{ p: '5%' }}>
         <div className="emailBtn-column">
           <h3>Help / Support</h3>
-          <p>
+          
             For all things technical and app-related. Send us an email:{" "}
             <Button
               variant="outlined"
@@ -58,7 +58,7 @@ export default function ContactUs() {
             >
               <EmailIcon />
             </Button>
-          </p>
+          
         </div>
 
 

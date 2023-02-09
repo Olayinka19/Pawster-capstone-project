@@ -6,12 +6,13 @@ import { getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCPdKAorTBC-SUVWQaNm3S5iPHd-2QaPcE",
-  authDomain: "pawster-capstone-app.firebaseapp.com",
-  projectId: "pawster-capstone-app",
-  storageBucket: "pawster-capstone-app.appspot.com",
-  messagingSenderId: "865391465843",
-  appId: "1:865391465843:web:f94bc719081df8daaee106"
+  apiKey: "AIzaSyDn4mg_8U3BHZON6uuQ-ycR1MeD0WvdXLc",
+  authDomain: "ola-pawster.firebaseapp.com",
+  projectId: "ola-pawster",
+  storageBucket: "ola-pawster.appspot.com",
+  messagingSenderId: "250681010956",
+  appId: "1:250681010956:web:1bfdf9cff741fa575a3729",
+  measurementId: "G-8182M4Z97Q"
 };
 
 // Initialize Firebase

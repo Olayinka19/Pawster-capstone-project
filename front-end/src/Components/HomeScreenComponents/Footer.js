@@ -6,6 +6,7 @@ import Link from '@mui/material/Link';
 
 
 
+
 function Copyright() {
   return (
     <Link underline='none' href="/" sx={{ color: 'black'}}>
@@ -21,8 +22,8 @@ function Copyright() {
 
 function SocialMedia() {
   return (
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
     <Typography variant='body2' align='center' >
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
       <a href="https://www.facebook.com/" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px" src="https://cdn-icons-png.flaticon.com/512/2504/2504903.png"></img>
         <i className="fab fa-facebook-square" style={{ fontSize: '24px' }} />
       </a>
@@ -38,8 +39,8 @@ function SocialMedia() {
       <a href="https://github.com/" target="_blank" rel="noreferrer" style={{ margin: '0 10px' }}><img width="35px" height="35px"  src="https://cdn-icons-png.flaticon.com/512/2504/2504911.png"></img>
         <i className="fab fa-linkedin" style={{ fontSize: '24px' }} />
       </a>
-    </div>
     </Typography>
+    </div>
   );
 }
 

@@ -31,11 +31,11 @@ function Account() {
      
 
       <div style={{display: "flex", justifyContent: 'center'}}>
-        <h2>Welcome, {user?.displayName}!</h2>
-        <img src={user?.photoURL} className="image-container" alt="PFP"></img>
+        <h2>Welcome, {user && user.displayName}!</h2>
+        <img src={user && user.photoURL} className="image-container" alt="PFP"></img>
       </div>
 
-      <h2>Email: {user?.email}</h2>
+      <h2>Email: {user && user.email}</h2>
 
       {/* <button onClick={handleSignOut}>Logout</button> */}
       <Button>
