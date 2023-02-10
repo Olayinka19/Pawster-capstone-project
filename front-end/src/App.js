@@ -29,6 +29,7 @@ import TinderCards from "../src/Components/User Pages/PetFinderAPI/PetFinderAPI"
 import Chats from "../src/Components/User Pages/Chats"
 import ChatScreen from './Components/User Pages/ChatScreen';
 import ContactForm from './Components/HomeScreenComponents/ContactForm';
+import DocsNeeded from './Components/OLD-newUserForm/DocsNeeded';
 
 
 function App() {
@@ -55,6 +56,7 @@ function App() {
                 <Route path='/contactForm' element={<ContactForm/>} />
                 <Route path='/userForm' element={<UserForm/>} />
                 <Route path='/petForm' element={<PetForm/>} />
+                <Route path='/docsNeeded' element={<DocsNeeded/>} />
 
               {/* Shelter Routes */}
                 <Route path="/shelter/*" element={ <ShelterStartingScreen />} />

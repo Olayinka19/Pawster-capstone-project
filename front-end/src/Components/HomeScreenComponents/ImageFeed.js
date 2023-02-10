@@ -6,6 +6,7 @@ import { useNavigate, useLocation, Link } from "react-router-dom";
 // import { Googlebutton } from 'react-google-button'
 import { UserAuth } from "../../Context/AuthContext";
 import Carousel from "react-bootstrap/Carousel";
+import Nav from "react-bootstrap/Nav";
 
 function srcset(image, size, rows = 1, cols = 1) {
   return {
@@ -161,7 +162,7 @@ export default function QuiltedImageList() {
           </button>
         ) : (
           <button className="Image-Feed-button" onClick={handleGoogleSignIn}>
-            Log in
+          <Nav.Link href="/login">Sign In</Nav.Link>
           </button>
         )}
       </div>

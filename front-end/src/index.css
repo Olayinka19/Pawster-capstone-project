@@ -24,6 +24,10 @@
   margin-bottom:100px;
    margin-top:50px; 
 }
+.login-detail{
+  justify-content: center !important;
+  align-items: center;
+}
 
 /* * {
   margin: 0;

@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import { GoogleButton } from 'react-google-button'
+import Card from 'react-bootstrap/Card';
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from '../Context/AuthContext';
 import { Button } from 'react-bootstrap';
@@ -26,9 +27,9 @@ export default function Login() {
 
 
   useEffect(() => {
-    if (user) {
+    if (user != null && user.displayName) {
       console.log(user)
-      navigate("/")
+      navigate("/account")
     } 
     // else {
     //   navigate("/login")
@@ -37,12 +38,18 @@ export default function Login() {
   }, [user]);
 
   return (
-    <div>
+    <div style={{ display: 'flex', justifyContent: 'center' }}>
 
-      <div className='login'>
-        <h3>Log In </h3>
-       <GoogleButton onClick={googleSignIn} />
-      </div>
+<Card>
+      <Card.Header as="h5">Sign In</Card.Header>
+      <Card.Body>
+        <Card.Title>Create an Account </Card.Title>
+        <Card.Text>
+          With supporting text below as a natural lead-in to additional content.
+        </Card.Text>
+        <Button variant="primary"><GoogleButton onClick={handleGoogleSignIn} /></Button>
+      </Card.Body>
+    </Card>
       
       
 

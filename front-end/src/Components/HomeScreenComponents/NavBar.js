@@ -103,7 +103,9 @@ function NavBar() {
             <Nav.Link href="/Account">Account</Nav.Link>
             <Nav.Link href="/contactForm">ContactForm</Nav.Link>
             <Nav.Link href="/petForm">PetForm</Nav.Link>
+            <Nav.Link href="/DocsNeeded">Documents</Nav.Link>
             <Nav.Link href="/userForm">UserForm</Nav.Link>
+            <Nav.Link href="/login">Sign In</Nav.Link>
             
           
         
