@@ -176,6 +176,9 @@
     }
 
     }
+    .metaMask {
+      background-size: contain;
+    }
     
   .PetFinderAPI_userLikedPet_Button {
 

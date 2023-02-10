@@ -6,7 +6,10 @@ import Account from './Components/HomeScreenComponents/Account';
 // import Login from './Components/HomeScreenComponents/Login';
 import { AuthContextProvider } from "./Context/AuthContext";
 import Login from './Components/Login';
+import MetaMask from '../src/Components/MetaMask';
 
+// import { useState } from 'react';
+// import { Button } from 'react-bootstrap';
 
 // Home Routes 
 import AboutPage from './Components/HomeScreenComponents/AboutPage';
@@ -16,11 +19,13 @@ import Support from './Components/HomeScreenComponents/Support';
 // import ShelterStartingPage from './Components/HomeScreenComponents/';
 // Shelter Route
 import ShelterStartingScreen from './Pages/ShelterStartingScreen';
+import Animation from "../src/Animation";
 
 import UserForm from './Components/Forms/UserForm';
 import PetForm from './Components/Forms/PetForm';
 
-
+import { useState} from 'react';
+import Button from 'react-bootstrap/Button';
 
 // User Route
 import UserStartingScreen from "../src/Pages/UserStartingScreen"
@@ -49,6 +54,8 @@ function App() {
                 <Route path="/support" element={<Support />} />
                 <Route path='/contactUs' element={<ContactUs />} />
                 <Route path='/chats' element={<Chats />} />
+                <Route path='/MetaMask' element={<MetaMask />} />
+    
                 
                 <Route path="/login" element={<Login />} />
               

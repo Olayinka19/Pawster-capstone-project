@@ -39,6 +39,7 @@ export default function ContactUs() {
       <br />
       <Container align="center" sx={{ p: '4%' }}>
         <br />
+        
         <h3> Contact Me </h3>
         <h6>Got something you want to talk about? Contact or email me and I promise to get back to you as soon as we can.</h6>
       </Container>

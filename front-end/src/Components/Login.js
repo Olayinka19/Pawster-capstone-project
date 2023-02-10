@@ -4,6 +4,8 @@ import Card from 'react-bootstrap/Card';
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from '../Context/AuthContext';
 import { Button } from 'react-bootstrap';
+// import Animation from '../Animation';
+import Nav from 'react-bootstrap';
 
 
 export default function Login() {
@@ -28,7 +30,7 @@ export default function Login() {
   useEffect(() => {
     if (user != null && user.displayName) {
       console.log(user)
-      navigate("/account")
+      navigate("/login")
     } 
     // else {
     //   navigate("/login")
@@ -47,6 +49,8 @@ export default function Login() {
           With supporting text below as a natural lead-in to additional content.
         </Card.Text>
         <Button variant="primary"><GoogleButton onClick={handleGoogleSignIn} /></Button>
+
+<Button href="/user/1/explore" >Explore Page</Button>
       </Card.Body>
     </Card>
       

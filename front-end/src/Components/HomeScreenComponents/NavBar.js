@@ -66,7 +66,7 @@ function NavBar() {
 
       <>
     {[false].map((expand) => (
-        <Navbar key={expand} bg="primary" expand={expand} className="mb-3">
+        <Navbar key={expand} bg="primary" expand={expand} className="mb-3 navbar">
           <Container fluid>
           <Navbar.Brand>
        
@@ -74,8 +74,6 @@ function NavBar() {
           <img className="NavBar-logo" src={logo} alt={"logo"} />
         </Nav.Link>
         </Navbar.Brand>
-
-      
         
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas
@@ -94,18 +92,45 @@ function NavBar() {
                 <Nav.Link href="user/1/explore">
                   Explore
                 </Nav.Link>
-                <Nav.Link href="/About">About
+                <Nav.Link href="/ContactUs">Developer</Nav.Link>
+                <Nav.Link href="/metaMask">MetaMask</Nav.Link>
+                {/* <Nav.Link href="/About">About
           
-            </Nav.Link>
-            <Nav.Link href="/Support">Support
-            </Nav.Link>
-            <Nav.Link href="/ContactUs">Developer</Nav.Link>
-            <Nav.Link href="/Account">Account</Nav.Link>
-            <Nav.Link href="/contactForm">ContactForm</Nav.Link>
-            <Nav.Link href="/petForm">PetForm</Nav.Link>
-            <Nav.Link href="/DocsNeeded">Documents</Nav.Link>
-            <Nav.Link href="/userForm">UserForm</Nav.Link>
-            <Nav.Link href="/login">Sign In</Nav.Link>
+            </Nav.Link> */}
+
+            {/* <Nav.Link href="/Support">Support
+            </Nav.Link> */}
+            {/* <Nav.Link href="/ContactUs">Developer</Nav.Link> */}
+            <Dropdown>
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
+      Profile
+      </Dropdown.Toggle>
+
+      
+      <Dropdown.Menu>
+      
+        <Dropdown.Item href="/Account">Account</Dropdown.Item>
+        <Dropdown.Item href="/about">About </Dropdown.Item>
+        <Dropdown.Item href="/login">Sign In</Dropdown.Item>
+        <Dropdown.Item href="/support">Support</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
+
+
+    <Dropdown>
+      <Dropdown.Toggle variant="light" id="dropdown-basic">
+      Forms
+      </Dropdown.Toggle>
+
+      
+      <Dropdown.Menu>
+      
+        <Dropdown.Item href="/petForm">Pet Form</Dropdown.Item>
+        
+        <Dropdown.Item href="/userForm">User Form</Dropdown.Item>
+        <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             
           
         
@@ -142,6 +167,7 @@ function NavBar() {
           )}
           </NavDropdown.Item>
           </NavDropdown>
+  
           </Nav>
           <Form className="d-flex">
                   <Form.Control
