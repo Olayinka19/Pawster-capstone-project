@@ -3,7 +3,6 @@ import { GoogleButton } from 'react-google-button'
 import { useNavigate } from "react-router-dom";
 import { UserAuth } from '../Context/AuthContext';
 import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
 
 export default function Login() {
@@ -29,7 +28,7 @@ export default function Login() {
   useEffect(() => {
     if (user) {
       console.log(user)
-      navigate("/user/1/explore")
+      navigate("/login")
     } 
     // else {
     //   navigate("/login")
@@ -43,8 +42,6 @@ export default function Login() {
       <div className='login'>
         <h3>Log In </h3>
        <GoogleButton onClick={googleSignIn} />
-       <br></br>
-       <Button><Link to="/user/1/explore"/>Explore Pets</Button>
       </div>
       
       
