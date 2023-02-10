@@ -20,7 +20,7 @@ export default function QuiltedImageList() {
   let navigate = useNavigate();
 
   const handleGoogleSignIn = async () => {
-    // alert("You will be redirected to log in");
+    alert("You will be redirected to log in");
     try {
       await googleSignIn();
       console.log(user);

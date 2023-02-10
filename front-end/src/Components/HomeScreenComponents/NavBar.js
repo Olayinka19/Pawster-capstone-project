@@ -17,7 +17,8 @@ import AboutPage from "./AboutPage";
 
 import ContactUs from "./ContactUs";
 import { Offcanvas } from "react-bootstrap";
-import Button from "@mui/material/Button";
+import {Button} from 'react-bootstrap';
+// import Button from "@mui/material/Button";
 import ContactForm from "./ContactForm";
 
 
@@ -40,7 +41,7 @@ function NavBar() {
       await logOut();
       console.log(user);
       navigate("/");
-      // alert("you have logged out");
+      alert("you have logged out");
     } catch (err) {
       console.log(err);
     }
@@ -48,7 +49,7 @@ function NavBar() {
 
 
   const handleGoogleSignIn = async () => {
-    // alert("You will be redirected to log in");
+    alert("You will be redirected to log in");
     try {
       await googleSignIn();
       console.log(user);
@@ -146,11 +147,15 @@ function NavBar() {
                     
                     
                   />
-                  <Button variant="outline-success">Search</Button>
+                  <Button variant="primary">Search</Button>
                 </Form>
+                <Button variant="warning">
+        <a href="/">BACK</a>
+      </Button>
                 </Offcanvas.Body>
                 </Navbar.Offcanvas>
-                </Container>    
+                </Container>   
+                 
     </Navbar>
     ))}
     </>
