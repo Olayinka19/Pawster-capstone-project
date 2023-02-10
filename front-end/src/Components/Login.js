@@ -44,7 +44,7 @@ export default function Login() {
         <h3>Log In </h3>
        <GoogleButton onClick={googleSignIn} />
        <br></br>
-       <Button><Link to="/user/1/explore" />Explore Pets</Button>
+       <Button><Link to="/user/1/explore"/>Explore Pets</Button>
       </div>
       
       
