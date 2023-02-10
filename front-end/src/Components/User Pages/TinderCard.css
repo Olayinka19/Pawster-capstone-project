@@ -36,7 +36,7 @@
   height: 70vh;
   display: flex;
   justify-content: center;
-  margin-left: 50px;
+  margin-left: 10px;
   margin-top: 21vh;
 }
 
@@ -72,20 +72,116 @@
   bottom: 10px;
   margin: 10px;
 }
+.first-image{
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
 /* smaller */
 @media (min-width: 320px) and (max-width: 480px) {
   .card {
-    width: 280px;
-    padding: 10 25px;
-    height: 52vh !important;
+    width: 300px;
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+    position: relative;
+    flex-direction: 'column';
+    background-color: 'white';
+    border-radius: 10px;
+    box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
+    height: 400px !important;
     justify-content: center !important;
-    /* background-color: #de3163; */
+    /*background-color: #de3163;
+    */
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+  /* Styles */
+  .card {
+    
+      width: 300px;
+      display: 'flex';
+      align-items: 'center';
+      justify-content: 'center';
+      position: relative;
+      flex-direction: 'column';
+      background-color: 'white';
+      border-radius: 10px;
+      box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
+      height: 400px !important;
+      justify-content: center !important;
+      /*background-color: #de3163;
+      */
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
   }
+  }
+
+  @media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+    /* Styles */
+    .card {
+    
+      width: 300px;
+      display: 'flex';
+      align-items: 'center';
+      justify-content: 'center';
+      position: relative;
+      flex-direction: 'column';
+      background-color: 'white';
+      border-radius: 10px;
+      box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
+      height: 400px !important;
+      justify-content: center !important;
+      /*background-color: #de3163;
+      */
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+
+  }
+    }
+    @media only screen 
+    and (device-width: 414px) 
+    and (device-height: 896px) 
+    and (-webkit-device-pixel-ratio: 2) { 
+      .card {
+    
+        width: 300px;
+        display: 'flex';
+        align-items: 'center';
+        justify-content: 'center';
+        position: relative;
+        flex-direction: 'column';
+        background-color: 'white';
+        border-radius: 10px;
+        box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
+        height: 400px !important;
+        justify-content: center !important;
+        /*background-color: #de3163;
+        */
+        -webkit-border-radius: 10px;
+        -moz-border-radius: 10px;
+        -ms-border-radius: 10px;
+        -o-border-radius: 10px;
+  
+    }
+
+    }
+    
   .PetFinderAPI_userLikedPet_Button {
 
     width: 80px;
     height: 30px;
-    background-color: #000!important;
+    /* background-color: #000!important; */
     justify-content: end;
     margin-top: 120px;
     font-size: 30px;
@@ -94,16 +190,52 @@
 /* Ipad */
 @media (min-width: 481px) and (max-width: 768px) {
   .card {
-    
-    width: 100px;
-    height: 42vh !important;
+    width: 200px;
+    height: 100% !important;
     background-color: #3731de;
   }
   .PetFinderAPI_userLikedPet_Button {
-    background-color: #de3163;
+    /* background-color: #de3163; */
+    display: 'flex';
+    width: 80px;
+    height: 30px !important;
 
   }
+  .first-image{
+    width: 300px;
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+    position: relative;
+    flex-direction: 'column';
+    background-color: 'white';
+    border-radius: 20px !important;
+    box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
+    height: 400px !important;
+    justify-content: center !important;
+    -webkit-border-radius: 20px !important;
+    -moz-border-radius: 20px !important;
+    -ms-border-radius: 20px !important;
+    -o-border-radius: 20px !important;
 }
+}
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+  /* Styles */
+  .card{
+    width: 400px !important;
+    display: 'flex';
+    align-items: 'center';
+    justify-content: 'center';
+    position: relative;
+    flex-direction: 'column';
+    background-color: 'white';
+    border-radius: 10px;
+    box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
+    height: 400px !important;
+    justify-content: center !important;
+  }
+  
+  }
 /* Computer */
 @media (min-width: 769px) and (max-width: 1024px) {
   .card {
@@ -112,6 +244,8 @@
     background-color: #31de51;
   }
   .PetFinderAPI_userLikedPet_Button {
-    background-color: rgb(255, 0, 212);
+    /* background-color: rgb(255, 0, 212); */
+    width: 90px;
+    height:20px;
   }
 }

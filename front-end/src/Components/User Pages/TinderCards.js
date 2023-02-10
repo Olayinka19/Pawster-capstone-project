@@ -69,6 +69,7 @@ export default function TinderCards({ animals }) {
     if (direction === "right") {
       //new code - for swiping right, needs to change the userLiked part to true... since its liked now
       // console.log(currentAnimal)
+      
       updateAnimal({ ...animals[index], userLiked: true }, animals[index].id);
     } else if (direction === "left") {
       updateAnimal({ ...animals[index], userLiked: false }, animals[index].id);
@@ -100,7 +101,7 @@ export default function TinderCards({ animals }) {
     swipe("left");
     // console.log(currentAnimal)
   };
-
+ 
   // useEffect (() => {
   //   if (changeSwipe === true) {
   //     goRight()
@@ -156,17 +157,19 @@ export default function TinderCards({ animals }) {
                   {animal.name} , {animal.breed}
                 </h3>
                 
-              {/* <p>{animal.description}</p> */}
+              
                 {/* <p>{console.log(changeSwipe)}</p> */}
               </div>
+              
             </div>
 
             {/* Tinder Buttons */}
+            {/* <h3>{animal.description}</h3> */}
           </TinderCard>
         );
       })}
 
-      {/* <SwipeButtons/> */}
+      <SwipeButtons/>
 
       {/* <div className="swipeButtons">
       {changeSwipe ? (<span>.</span> ) : (
@@ -187,8 +190,8 @@ export default function TinderCards({ animals }) {
         <IconButton className="swipeButtons_lightning" size="small">
           <FlashOnIcon fontSize="large" />
         </IconButton>
-      </div> */}
-    </div>
+      </div>
+    </div> */}
     // </div>
   );
 }

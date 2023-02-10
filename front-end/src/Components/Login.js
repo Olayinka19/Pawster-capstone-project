@@ -28,7 +28,7 @@ export default function Login() {
   useEffect(() => {
     if (user) {
       console.log(user)
-      navigate("/login")
+      navigate("/")
     } 
     // else {
     //   navigate("/login")

@@ -81,7 +81,7 @@ export default function QuiltedImageList() {
       </Carousel.Item>
       <Carousel.Item>
         <img
-        width="480px" height="320px" 
+        width="480px" height="320px"
           className="first-image" 
           src="https://as1.ftcdn.net/v2/jpg/01/88/22/34/1000_F_188223479_kHnLFTv4qozVqMvjAFPkPwmzsTB1JZtu.jpg"
           alt="Third slide"
