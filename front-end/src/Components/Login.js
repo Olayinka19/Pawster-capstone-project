@@ -19,7 +19,6 @@ export default function Login() {
     try {
       await googleSignIn();
       alert("Welcome to the Sign In Page")
-
     } catch (error) {
       console.log(error)
     }
