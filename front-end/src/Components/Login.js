@@ -41,7 +41,7 @@ export default function Login() {
 
       <div className='login'>
         <h3>Log In </h3>
-        <br></br>
+        <googleSignIn />
       </div>
 
 

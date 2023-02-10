@@ -53,7 +53,9 @@ function NavBar() {
     try {
       await googleSignIn();
       console.log(user);
-      navigate("/user/1/explore");
+      if (user) {
+        navigate("/user/1/explore");
+      }
     } catch (error) {
       console.log(error);
     }
