@@ -55,13 +55,7 @@ make sure you are on the same level as the `package.json` of the `back-end` dire
 - `touch .env`
 
 ```
-PORT=3333
-PG_HOST=localhost
-PG_PORT=5432
-PG_DATABASE=postgres
-PG_USER=postgres
-PG_PASSWORD=""
-```
+
 
 - `npm run db:init`
 - `npm run db:seed`
