@@ -1,10 +1,10 @@
-import React, { useState, useMemo, useRef, useEffect } from "react";
+import React, { useState, useMemo, useRef} from "react";
 import TinderCard from "react-tinder-card";
 import "./TinderCard.css";
 import SwipeButtons from "./SwipeButtons";
-import { IconButton } from "@mui/material";
-import ReplayIcon from "@mui/icons-material/Replay";
-import CloseIcon from "@mui/icons-material/Close";
+// import { IconButton } from "@mui/material";
+// import ReplayIcon from "@mui/icons-material/Replay";
+// import CloseIcon from "@mui/icons-material/Close";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FlashOnIcon from "@mui/icons-material/FlashOn";

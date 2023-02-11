@@ -1,4 +1,4 @@
-import React, { useState, useEffect, createContext } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import Auth_Token from "./Auth_Token";
 import TinderCards from "../TinderCards";

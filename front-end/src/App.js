@@ -7,6 +7,7 @@ import Account from './Components/HomeScreenComponents/Account';
 import { AuthContextProvider } from "./Context/AuthContext";
 import Login from './Components/Login';
 import MetaMask from '../src/Components/MetaMask';
+import Affiliate from './Components/HomeScreenComponents/Affiliate';
 
 // import { useState } from 'react';
 // import { Button } from 'react-bootstrap';
@@ -64,6 +65,7 @@ function App() {
                 <Route path='/userForm' element={<UserForm/>} />
                 <Route path='/petForm' element={<PetForm/>} />
                 <Route path='/docsNeeded' element={<DocsNeeded/>} />
+                <Route path='/affiliate' element={<Affiliate/>} />
 
               {/* Shelter Routes */}
                 <Route path="/shelter/*" element={ <ShelterStartingScreen />} />

@@ -16,7 +16,7 @@ export default function PetCards({ pet, index, id , randomIndex }) {
         <>
             <Card sx={{ maxWidth: 300 }} key={index + 1}>
                 {/* Image */}
-                <img
+                <img alt="pfp"
                     src={pet.photo ?
                         pet.photo :
                         'https://peoplewithpets.com/wp-content/uploads/2019/06/people-with-Pet-no-floorplan-image.jpg'}

@@ -93,6 +93,7 @@ function NavBar() {
                   Explore
                 </Nav.Link>
                 <Nav.Link href="/ContactUs">Developer</Nav.Link>
+                <Nav.Link href="/Affiliate">Amazon Store</Nav.Link>
                 <Nav.Link href="/metaMask">MetaMask</Nav.Link>
                 {/* <Nav.Link href="/About">About
           
