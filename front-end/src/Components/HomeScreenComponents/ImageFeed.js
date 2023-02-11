@@ -8,6 +8,7 @@ import { UserAuth } from "../../Context/AuthContext";
 import Carousel from "react-bootstrap/Carousel";
 import Nav from "react-bootstrap/Nav";
 
+
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -37,12 +38,11 @@ export default function QuiltedImageList() {
       <div className="splash-image">
         <h1>Find the right pet for you</h1>
        
-
         <Carousel fade>
       <Carousel.Item interval={2000}>
         <img width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/05/59/53/86/1000_F_559538674_OgqSqQeIXx0sCUPv7kzS4umW8szBu2SF.jpg"
+          src="https://as2.ftcdn.net/v2/jpg/03/43/93/67/1000_F_343936721_qfEv7F66I866hz4G3MbTm5PFubzhlNSR.jpg"
           alt="First slide"
         />
         
@@ -52,7 +52,7 @@ export default function QuiltedImageList() {
         borderradius = "20x%"
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/00/81/18/78/1000_F_81187840_wx117MR3aq8OrquMHI5HZgFqgL8IsoOe.jpg"
+          src="https://t3.ftcdn.net/jpg/03/43/93/66/240_F_343936683_P6ceHd41JoSqWUWp73rLtART3Uh4wF5B.jpg"
           alt="Second slide"
         />
 
@@ -63,7 +63,7 @@ export default function QuiltedImageList() {
        width="480px" height="320px" 
        border-radius = "20x%"
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/01/56/09/98/1000_F_156099814_8CC5cxiwLK0bwuT1AcneSewS1KuJqs3p.jpg"
+          src="https://as2.ftcdn.net/v2/jpg/05/58/60/49/1000_F_558604966_WzIklLzwVaFT2YyXFKTQ5q7khGzm1c2C.jpg"
           alt="Third slide"
         />
 
@@ -74,7 +74,7 @@ export default function QuiltedImageList() {
         border-radius = "20x%"
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/05/59/53/86/1000_F_559538628_ionlXbmGsNWadwZfp5CDTKkrtWLIUaz8.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/05/68/89/54/1000_F_568895465_ijrLFhsS7ge54WTFSxWQHzx1S7PdWw15.jpg"
           alt="Third slide"
         />
 
@@ -84,7 +84,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px"
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/01/88/22/34/1000_F_188223479_kHnLFTv4qozVqMvjAFPkPwmzsTB1JZtu.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/03/43/93/64/1000_F_343936486_opgh9u3iuUeEvpQc76uHOOwYwWys7Zfm.jpg"
           alt="Third slide"
         />
 
@@ -94,7 +94,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as2.ftcdn.net/v2/jpg/01/70/84/85/1000_F_170848578_lLypI0m2DdsAfd7FwfSTc55hlhJAjaUK.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/05/57/06/70/1000_F_557067024_yqdFQ16QfdvljQ0IcV3oKeqiCz6xFlk5.jpg"
           alt="Third slide"
         />
 
@@ -104,7 +104,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as2.ftcdn.net/v2/jpg/00/65/17/41/1000_F_65174116_67t4ud8nVhcFPNKEKuKSHuwu9tLKp80l.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/05/55/64/02/1000_F_555640204_OpD4wnaJ0sK0ablG3eKKAApuJM2ePS7p.jpg"
           alt="Third slide"
         />
 
@@ -114,7 +114,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/01/83/61/06/1000_F_183610659_eN5pcZBcViM96HDesCDK8zEJH6gMbpr5.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/04/80/02/28/1000_F_480022826_6268Oj4P6hkEfFnZSINTMOd3oy5knLRo.jpg"
           alt="Third slide"
         />
 
@@ -124,7 +124,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/01/11/50/80/1000_F_111508056_zxXkQRYgpPbyKNdYYdgTdUVg6Q4BBbJ1.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/03/07/97/92/1000_F_307979267_FKF2vsIZjRuCvRMcsoCq3WS3HHBMgSvm.jpg"
           alt="Third slide"
         />
 
@@ -134,7 +134,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/04/60/60/44/1000_F_460604425_eE3oyjq8zxcrGzwd6ixOJzvTBQTkdDYs.jpg"
+          src="https://as1.ftcdn.net/v2/jpg/01/03/57/58/1000_F_103575831_UFdxz8TejznsskF1YGtg2eOvtkMhk4L5.jpg"
           alt="Third slide"
         />
 
@@ -144,7 +144,7 @@ export default function QuiltedImageList() {
         <img
         width="480px" height="320px" 
           className="first-image" 
-          src="https://as1.ftcdn.net/v2/jpg/02/03/29/40/1000_F_203294034_N0LDRmmncjj7pkzw4sHkquZBhGLyjWnw.jpg"
+          src="https://t3.ftcdn.net/jpg/05/54/80/20/240_F_554802089_SpMpRHFjQnubBSdF3xZOo5umvO7ULPHl.jpg"
           alt="Third slide"
         />
 
