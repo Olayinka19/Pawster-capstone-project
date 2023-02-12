@@ -11,7 +11,7 @@ function Copyright() {
   return (
     <Link underline='none' href="/" sx={{ color: 'black'}}>
       <Typography variant="body2" align="center" fontFamily={'Fraunces'} >
-       Olayinka {'Copyright © '}
+       Ola-Pawster {'Copyright © '}
         {' '}
         {new Date().getFullYear()}
         {'.'}

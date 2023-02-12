@@ -30,7 +30,7 @@ export default function Login() {
   useEffect(() => {
     if (user != null && user.displayName) {
       console.log(user)
-      navigate("/login")
+      navigate("/account")
     } 
     // else {
     //   navigate("/login")
