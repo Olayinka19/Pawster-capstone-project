@@ -56,7 +56,7 @@ export default function ContactUs() {
             For all things technical and app-related. Send us an email:{" "}
             <Button
               variant="outlined"
-              href="mailto:pawster.app@gmail.com?subject=Pawster App - Technical Concern"
+              href="mailto:pawster.app@gmail.com?subject=Ola-Pawster App - Technical Concern"
             >
               <EmailIcon />
             </Button>

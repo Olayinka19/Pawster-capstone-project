@@ -26,6 +26,7 @@ import Support from './Components/HomeScreenComponents/Support';
 import ShelterStartingScreen from './Pages/ShelterStartingScreen';
 import UserForm from './Components/Forms/UserForm';
 import PetForm from './Components/Forms/PetForm';
+import PetBlog from './Pages/PetBlog';
 
 import { useState} from 'react';
 import Button from 'react-bootstrap/Button';
@@ -56,6 +57,7 @@ function App() {
                 <Route path="/support" element={<Support />} />
                 <Route path='/contactUs' element={<ContactUs />} />
                 <Route path='/chats' element={<Chats />} />
+                <Route path='/PetBlog' element={<PetBlog />} />
                 <Route path='/MetaMask' element={<MetaMask />} />
     
                 

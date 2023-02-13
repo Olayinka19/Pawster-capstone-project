@@ -75,7 +75,9 @@ function NavBar() {
         </Nav.Link>
         </Navbar.Brand>
         
-          <div></div>
+          {/* <div>
+            <Nav.Link href="/PetBlog">Blog</Nav.Link>
+          </div> */}
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
             <Navbar.Offcanvas className="dropdown-container"
               id={`offcanvasNavbar-expand-${expand}`}
@@ -118,7 +120,10 @@ function NavBar() {
 <hr/>
                 <Nav.Link href="/ShelterLocation">Shelters</Nav.Link>
                 <hr/>
-                <Nav.Link href="/Affiliate"><img width="40px" height="40px"  src="https://cdn3.iconfinder.com/data/icons/social-media-logos-flat-colorful/2048/5326_-_Amazon-512.png"></img></Nav.Link>
+                <Nav.Link href="/PetBlog">Blog</Nav.Link>
+                <hr/>
+
+                <a href="/Affiliate"><Button variant="warning"><img width="40px" height="40px"  src="https://cdn3.iconfinder.com/data/icons/social-media-logos-flat-colorful/2048/5326_-_Amazon-512.png"></img>Pets Store!</Button></a>
                 <hr/>
             <div></div>
             <Dropdown>

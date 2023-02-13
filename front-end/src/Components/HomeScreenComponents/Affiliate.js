@@ -195,6 +195,7 @@ $34.99 Tractive GPS Pet Tracker for Cats
       </CardActions>
     </Card>
     
+    <a href="/PetBlog"><Button>Pets Blog</Button></a>
     
     
     
