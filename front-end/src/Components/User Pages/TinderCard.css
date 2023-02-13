@@ -72,11 +72,11 @@
   bottom: 10px;
   margin: 10px;
 }
-/* .welcome {
+.welcome {
   font-size: 🛩 !important;
   align-items: center!important;
   margin-left: 120px;
-} */
+}
 .first-image{
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -87,23 +87,23 @@
 /* smaller */
 @media (min-width: 320px) and (max-width: 480px) {
   .card {
-    width: 300px;
+    width: 650px;
     display: 'flex';
     align-items: 'center';
     justify-content: 'center';
     position: relative;
     flex-direction: 'column';
     background-color: 'white';
-    border-radius: 10px;
+    border-radius: 19px;
     box-shadow: '0px 0px 10px rgba(0, 0, 0, 0.1)';
     height: 400px !important;
     justify-content: center !important;
     /*background-color: #de3163;
-    */
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    */-webkit-border-radius: 10px;
+    -moz-border-radius: 19px;
+    -ms-border-radius: 19px;
+    -o-border-radius: 19px;
+    -webkit-border-radius: 19px;
 }
 .splash-image{
   width: 100%;
@@ -146,6 +146,15 @@
     width: '30px';
     height: '30px';
   
+  }
+  .PetFinderAPI_userLikedPet_Button {
+
+    width: 30px;
+    height: 30px;
+    /* background-color: #000!important; */
+    justify-content: center;
+    margin-top: 120px;
+    font-size: 30px;
   }
   }
 
@@ -282,8 +291,8 @@
   }
   .PetFinderAPI_userLikedPet_Button {
     /* background-color: rgb(255, 0, 212); */
-    width: 90px;
-    height:20px;
+    width: 50px;
+    height:10px;
   }
   .offcanvas-container{
     width: '50px';

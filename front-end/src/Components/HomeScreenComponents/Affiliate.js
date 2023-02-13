@@ -154,6 +154,46 @@ $34.99 Tractive GPS Pet Tracker for Cats
       <a href="https://amzn.to/3lvQW9p" target="_blank" rel="noreferrer"> <Button size="small" variant="warning">Buy Now</Button></a>
       </CardActions>
     </Card>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        height="240"
+        image="https://m.media-amazon.com/images/I/71DGkeplRlL._AC_SL1500_.jpg"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+$34.99 Tractive GPS Pet Tracker for Cats 
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        30% off!! Pet Tracker for Cats - Waterproof, GPS Location & Smart Activity Tracker, Unlimited Range, Works with Any Collar (Dark Blue)
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <a href="https://amzn.to/3lvQW9p" target="_blank" rel="noreferrer"> <Button size="small" variant="warning">Buy Now</Button></a>
+      </CardActions>
+    </Card>
+    <Card sx={{ maxWidth: 345 }}>
+      <CardMedia
+        component="img"
+        alt="green iguana"
+        height="240"
+        image="https://m.media-amazon.com/images/I/71DGkeplRlL._AC_SL1500_.jpg"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+        
+$34.99 Tractive GPS Pet Tracker for Cats 
+        </Typography>
+        <Typography variant="body2" color="text.secondary">
+        30% off!! Pet Tracker for Cats - Waterproof, GPS Location & Smart Activity Tracker, Unlimited Range, Works with Any Collar (Dark Blue)
+        </Typography>
+      </CardContent>
+      <CardActions>
+      <a href="https://amzn.to/3lvQW9p" target="_blank" rel="noreferrer"> <Button size="small" variant="warning">Buy Now</Button></a>
+      </CardActions>
+    </Card>
     
     
     

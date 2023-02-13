@@ -19,9 +19,11 @@ import Feed from './Components/HomeScreenComponents/Feed';
 import Support from './Components/HomeScreenComponents/Support';
 // import ShelterStartingPage from './Components/HomeScreenComponents/';
 // Shelter Route
+// import ShelterStartingScreen from './Pages/ShelterStartingScreen';
+// import Animation from "../src/Animation";
+// import ShelterForm from '../src/Components/Forms/ShelterForm';
+// import EditPetForm from '../src/Components/Forms/EditPetForm';
 import ShelterStartingScreen from './Pages/ShelterStartingScreen';
-import Animation from "../src/Animation";
-
 import UserForm from './Components/Forms/UserForm';
 import PetForm from './Components/Forms/PetForm';
 
@@ -36,7 +38,7 @@ import Chats from "../src/Components/User Pages/Chats"
 import ChatScreen from './Components/User Pages/ChatScreen';
 import ContactForm from './Components/HomeScreenComponents/ContactForm';
 import DocsNeeded from './Components/OLD-newUserForm/DocsNeeded';
-
+import ShelterLocation from './Components/User Pages/ShelterLocation';
 function App() {
 
 
@@ -58,11 +60,13 @@ function App() {
     
                 
                 <Route path="/login" element={<Login />} />
+                <Route path="/ShelterLocation" element={<ShelterLocation />} />
               
                 <Route path='/account' element={<Account/>} />
                 <Route path='/contactForm' element={<ContactForm/>} />
                 <Route path='/userForm' element={<UserForm/>} />
                 <Route path='/petForm' element={<PetForm/>} />
+                {/* <Route path='/ShelterStartingScreen' element={<ShelterScreen/>} /> */}
                 <Route path='/docsNeeded' element={<DocsNeeded/>} />
                 <Route path='/affiliate' element={<Affiliate/>} />
 
