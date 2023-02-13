@@ -167,7 +167,7 @@ export default function QuiltedImageList() {
           </button>
         ) : (
           <button className="Image-Feed-button" onClick={handleGoogleSignIn}>
-          Sign In
+        Log in
           </button>
         )}
       </div>
