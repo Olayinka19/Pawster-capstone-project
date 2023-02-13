@@ -121,6 +121,7 @@ function NavBar() {
                 <Nav.Link href="/ShelterLocation">Shelters</Nav.Link>
                 <hr/>
                 <Nav.Link href="/PetBlog">Blog</Nav.Link>
+                <Nav.Link href="/PetBlog">Blog</Nav.Link>
                 <hr/>
 
                 <a href="/Affiliate"><Button variant="warning"><img width="40px" height="40px"  src="https://cdn3.iconfinder.com/data/icons/social-media-logos-flat-colorful/2048/5326_-_Amazon-512.png"></img>Pets Store!</Button></a>
