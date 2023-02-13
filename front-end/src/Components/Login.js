@@ -28,18 +28,18 @@ export default function Login() {
 
 
   useEffect(() => {
-    if (user != null && user.displayName) {
+    if (user) {
       console.log(user)
-      navigate("/account")
+      navigate("/Account")
     } 
-    // else {
-    //   navigate("/login")
-    // }
+    else if (!user) {
+      navigate("/Login")
+    }
 
   }, [user]);
 
   return (
-    <div style={{ display: 'flex', justifyContent: 'center' }}>
+    <div className='login-content' style={{ display: 'flex', justifyContent: 'center' }}>
 
 <Card>
       <Card.Header as="h5">Sign In</Card.Header>

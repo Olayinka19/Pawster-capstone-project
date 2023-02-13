@@ -4,7 +4,8 @@
     border-radius: 50%;
     overflow: hidden;
     text-align: center;
-
+   /* background-image: url('https://img.freepik.com/free-photo/composition-with-treats-dogs-white-surface_23-2148181689.jpg?w=2000&t=st=1676241900~exp=1676242500~hmac=3ac319ce7a074090a3c86a3ea2c26f80c38827b97f9c2c77c6af26be4eea9377'); */
+   background-size: cover;
 }
 /* .card-profile {
     margin-left: 450px;

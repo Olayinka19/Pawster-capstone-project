@@ -27,7 +27,12 @@ export default function QuiltedImageList() {
     try {
       await googleSignIn();
       console.log(user);
-      navigate("/user/1/explore");
+      if (!user) {
+        navigate("/Login");
+      } else {
+        navigate("/user/1/explore")
+      }
+      
     } catch (error) {
       console.log(error);
     }
@@ -36,7 +41,7 @@ export default function QuiltedImageList() {
   return (
     <div className="outter-div" sx={{ backgroundColor: "black" }}>
       <div className="splash-image">
-        <h1>Find the right pet for you</h1>
+        {/* <h1>Find the right pet for you</h1> */}
        
         <Carousel fade>
       <Carousel.Item interval={2000}>
@@ -162,7 +167,7 @@ export default function QuiltedImageList() {
           </button>
         ) : (
           <button className="Image-Feed-button" onClick={handleGoogleSignIn}>
-          <Nav.Link href="/login">Sign In</Nav.Link>
+          Sign In
           </button>
         )}
       </div>
@@ -172,7 +177,7 @@ export default function QuiltedImageList() {
 
 const itemData = [
   {
-    img: "https://bestfriends.org/sites/default/files/2022-08/DrBlissShiba8725SAx2.jpg",
+    img: "https://img.freepik.com/premium-photo/large-group-cats-dogs-looking-camera-blue-background_191971-28558.jpg?w=2000",
     title: "Breakfast",
     rows: 2,
     cols: 2,

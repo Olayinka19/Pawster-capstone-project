@@ -75,26 +75,48 @@ function NavBar() {
         </Nav.Link>
         </Navbar.Brand>
         
+          <div></div>
         <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} />
-            <Navbar.Offcanvas
+            <Navbar.Offcanvas className="dropdown-container"
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
             >
         <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
-                  Categories
+                <div style={{display: 'flex'}}>
+                {user && user.displayName ? (
+            <img
+
+              style={{ marginRight: "20px", borderRadius: "25px", width:"45px" ,
+              height:"45px" }}
+              alt="user-img"
+              src={user && user.photoURL}
+            />
+          ) :
+           <img src="https://cdn-icons-png.flaticon.com/512/5267/5267467.png" width="55px" height="55px"></img>}
+                 {user && user.displayName ? (
+            <p>Hi, {user.displayName}
+             </p>
+      
+          ) : null }  
+          </div>
+          
+                
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
               
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Nav.Link href="user/1/explore">
-                  Explore
+                <Nav.Link href="user/1/explore"><Button variant="warning">Explore</Button>
+                {/* <iframe width="60px" height="60px" src="https://cdn-icons-mp4.flaticon.com/512/8718/8718662.mp4"></iframe> */}
                 </Nav.Link>
+                <hr/>
                 <Nav.Link href="/ContactUs">Developer</Nav.Link>
-                <Nav.Link href="/Affiliate">Amazon Store</Nav.Link>
-                <Nav.Link href="/metaMask">MetaMask</Nav.Link>
+                <hr/>
+                <Nav.Link href="/Affiliate"><img width="40px" height="40px"  src="https://cdn3.iconfinder.com/data/icons/social-media-logos-flat-colorful/2048/5326_-_Amazon-512.png"></img></Nav.Link>
+                <hr/>
+                
                 {/* <Nav.Link href="/About">About
           
             </Nav.Link> */}
@@ -102,17 +124,31 @@ function NavBar() {
             {/* <Nav.Link href="/Support">Support
             </Nav.Link> */}
             {/* <Nav.Link href="/ContactUs">Developer</Nav.Link> */}
+            <div></div>
             <Dropdown>
-      <Dropdown.Toggle variant="light" id="dropdown-basic">
-      Profile
+      <Dropdown.Toggle variant="light" id="dropdown-basic" className="dropdown">
+      <img src="https://img.freepik.com/premium-photo/targeted-3d-render-icon-illustration_726846-2835.jpg?w=1480" width="40px" height="40px"></img>
       </Dropdown.Toggle>
-
-      
-      <Dropdown.Menu>
+      <hr/>
+      <Dropdown.Menu className="dropdown-content">
       
         <Dropdown.Item href="/Account">Account</Dropdown.Item>
         <Dropdown.Item href="/about">About </Dropdown.Item>
-        <Dropdown.Item href="/login">Sign In</Dropdown.Item>
+        <Nav.Link href="/metaMask">MetaMask</Nav.Link>
+        <Dropdown.Item href="/Login">Sign Up</Dropdown.Item>
+        <Dropdown.Item>  {user && user.displayName ? (
+            <button className="NavBar-login-button2" onClick={handleSignOut}>
+              Logout
+            </button>
+          ) : (
+            <button
+              className="NavBar-login-button2"
+              onClick={handleGoogleSignIn}
+            >
+              Log In
+            </button>
+          )}</Dropdown.Item>
+
         <Dropdown.Item href="/support">Support</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
@@ -135,7 +171,7 @@ function NavBar() {
             
           
         
-        <NavDropdown
+        {/* <NavDropdown
                     title="Dropdown"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
@@ -167,9 +203,10 @@ function NavBar() {
             </button>
           )}
           </NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown> */}
   
           </Nav>
+          <hr />
           <Form className="d-flex">
                   <Form.Control
                     type="search"
@@ -179,10 +216,12 @@ function NavBar() {
                     
                     
                   />
-                  <Button variant="primary">Search</Button>
+                  <hr/>
                 </Form>
+                <Button variant="light"><img width="30px" height="30px" src="https://cdn-icons-png.flaticon.com/512/9655/9655793.png"></img></Button>
+                <hr/>
                 <Button variant="warning">
-        <a href="/">BACK</a>
+        <a href="/"><img width="30px" height="30px" src="https://cdn-icons-png.flaticon.com/128/3736/3736120.png"></img></a>
       </Button>
                 </Offcanvas.Body>
                 </Navbar.Offcanvas>

@@ -72,6 +72,11 @@
   bottom: 10px;
   margin: 10px;
 }
+/* .welcome {
+  font-size: 🛩 !important;
+  align-items: center!important;
+  margin-left: 120px;
+} */
 .first-image{
   border-radius: 20px;
   -webkit-border-radius: 20px;
@@ -105,6 +110,11 @@
   height: 100vh;
   background-size: cover;
 }
+.offcanvas-container{
+  width: '30px';
+  height: '30px';
+
+}
 @media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
   /* Styles */
   .card {
@@ -127,6 +137,15 @@
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
 
+  }
+  .welcome {
+    font-size: x-small!important;
+    justify-content: center;
+  }
+  .offcanvas-container{
+    width: '30px';
+    height: '30px';
+  
   }
   }
 
@@ -153,6 +172,11 @@
       -o-border-radius: 10px;
 
   }
+  .offcanvas-container{
+    width: '30px';
+    height: '30px';
+  
+  }
     }
     @media only screen 
     and (device-width: 414px) 
@@ -178,6 +202,11 @@
         -ms-border-radius: 10px;
         -o-border-radius: 10px;
   
+    }
+    .offcanvas-container{
+      width: '30px';
+      height: '30px';
+    
     }
 
     }
@@ -255,6 +284,11 @@
     /* background-color: rgb(255, 0, 212); */
     width: 90px;
     height:20px;
+  }
+  .offcanvas-container{
+    width: '50px';
+    height: '50px';
+  
   }
   /* .affiliate {
     width: 500px !important;

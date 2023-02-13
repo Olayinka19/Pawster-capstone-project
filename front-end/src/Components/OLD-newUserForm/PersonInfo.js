@@ -68,8 +68,13 @@ export default function PersonInfo({ handleTextChange, handleNumberChange }) {
                             onChange={handleNumberChange}
                         // required
                         />
+                         <Button variant="warning">
+        <a href="/"><img width="30px" height="30px" src="https://cdn-icons-png.flaticon.com/128/3736/3736120.png"></img></a>
+      </Button>
                     </Form.Group>
+                    
                 </div>
+                
             </div>
         </div>
 

@@ -11,6 +11,11 @@
   overflow:auto; */
 }
 
+.dropdown-container {
+  background-image: url('https://img.freepik.com/free-vector/different-pets-concept_52683-37940.jpg?w=1380&t=st=1676229491~exp=1676230091~hmac=3e41b044f4126855e9602e4b28143da5e52d09d4ed1074db4e13b5689a3a4985');
+  background-size: cover;
+}
+
 .login {
   text-align: center;
   margin: 0 auto;

@@ -16,7 +16,7 @@ export default function Account({ handleTextChange, handleNumberChange }) {
                             id="name"
                             placeholder="Enter Your Full Name"
                             onChange={handleTextChange}
-                        // required
+                        required
                         />
                     </Form.Group>
 
@@ -28,7 +28,7 @@ export default function Account({ handleTextChange, handleNumberChange }) {
                             type="number"
                             placeholder="Enter age"
                             onChange={handleNumberChange}
-                        // required
+                        required
                         />
                     </Form.Group>
 
@@ -68,7 +68,7 @@ export default function Account({ handleTextChange, handleNumberChange }) {
                             type="number"
                             placeholder="Enter Your Net Income"
                             onChange={handleNumberChange}
-                        // required
+                        required
                         />
                     </Form.Group>
 
@@ -78,7 +78,7 @@ export default function Account({ handleTextChange, handleNumberChange }) {
                                     as="select"
                                     name="state"
                                     // onChange={handleAddressTextChange}
-                                // required
+                                required
                                 >
                                     <option value="">Select State</option>
                                     <option value="AL">Alabama</option>
@@ -138,6 +138,9 @@ export default function Account({ handleTextChange, handleNumberChange }) {
                             <Button type="submit" class="btn btn-">
                             <Nav.Link href="/user/1/explore">Submit</Nav.Link>
                             </Button>
+                            <Button variant="warning">
+        <a href="/"><img width="30px" height="30px" src="https://cdn-icons-png.flaticon.com/128/3736/3736120.png"></img></a>
+      </Button>
                 </div>
             </div>
         </div>

@@ -18,6 +18,7 @@ import ContactDevCards from "./ContactDevCards";
 import "./ContactUs.css";
 
 export default function ContactUs() {
+  
   const developers = [
   
     {
@@ -31,7 +32,7 @@ export default function ContactUs() {
     },
   ];
   return (
-    <>
+    <div className="contact-container">
       {/* <br />
       <br /> */}
       {/* <br /> */}
@@ -83,9 +84,10 @@ export default function ContactUs() {
           </div>
 
         </div>
-
+        <Button variant="warning">
+        <a href="/"><img width="30px" height="30px" src="https://cdn-icons-png.flaticon.com/128/3736/3736120.png"></img></a>
+      </Button>
       </Stack>
-
-    </>
+    </div>
   );
 }
