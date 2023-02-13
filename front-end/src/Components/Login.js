@@ -31,8 +31,7 @@ export default function Login() {
     if (user) {
       console.log(user)
       navigate("/Account")
-    } 
-    else if (!user) {
+    } else  {
       navigate("/Login")
     }
 
