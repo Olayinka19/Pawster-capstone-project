@@ -156,6 +156,8 @@ export default function QuiltedImageList() {
        
       </Carousel.Item>
     </Carousel>
+    <br/>
+    <br/>
         {user && user.displayName ? (
           <button className="Image-Feed-button">
             <Link to="/user/1/explore">
