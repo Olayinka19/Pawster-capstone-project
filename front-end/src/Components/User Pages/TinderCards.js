@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useRef} from "react";
+import React, { useState, useMemo, useRef, useEffect} from "react";
 import TinderCard from "react-tinder-card";
 import "./TinderCard.css";
 import SwipeButtons from "./SwipeButtons";
@@ -11,11 +11,13 @@ import FlashOnIcon from "@mui/icons-material/FlashOn";
 import axios from "axios";
 import { async } from "@firebase/util";
 import { useNavigate } from "react-router-dom";
+import Loader from './Loader';
 
 
 export default function TinderCards({ animals }) {
   const [currentIndex, setCurrentIndex] = useState(animals.length - 1);
   const [lastDirection, setLastDirection] = useState();
+  const [loading, setLoading] = useState(true);
   const currentIndexRef = useRef(currentIndex);
   const navigate = useNavigate();
   const [changeSwipe, setChangeSwipe] = useState(false);
@@ -41,7 +43,12 @@ export default function TinderCards({ animals }) {
     userLiked: false,
     image_url: null,
   });
+  //<================ Loading Feature ================>
+ useEffect(() => {
+  setLoading(false)
+ } , []);
 
+  // <================ Loading Feature <================
   const [likedAnimals, setLikedAnimals] = useState([]);
 
   const childRefs = useMemo(
@@ -156,21 +163,19 @@ export default function TinderCards({ animals }) {
                 <h3>
                   {animal.name} , {animal.breed}
                 </h3>
-                
-              
-                {/* <p>{console.log(changeSwipe)}</p> */}
+      
               </div>
-              
+      
             </div>
-
-            {/* Tinder Buttons */}
-            {/* <h3>{animal.description}</h3> */}
           </TinderCard>
+      
         );
       })}
+    
 
       <SwipeButtons/>
-
+    
+    
       {/* <div className="swipeButtons">
       {changeSwipe ? (<span>.</span> ) : (
          <span>,</span>

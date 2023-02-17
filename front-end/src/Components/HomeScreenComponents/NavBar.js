@@ -123,6 +123,24 @@ function NavBar() {
                     </Button>
                     {/* <iframe width="60px" height="60px" src="https://cdn-icons-mp4.flaticon.com/512/8718/8718662.mp4"></iframe> */}
                   </Nav.Link>
+                  <hr/>
+                  <Nav.Link href="/user/1/explore"><Button variant='warning'>Explore</Button></Nav.Link>
+                  <hr/>
+                  {user && user.displayName ? (
+                          <button
+                            className="NavBar-login-button2"
+                            onClick={handleSignOut}
+                          >
+                            Logout
+                          </button>
+                        ) : (
+                          <button
+                            className="NavBar-login-button2"
+                            onClick={handleGoogleSignIn}
+                          >
+                            Log In
+                          </button>
+                        )}
                   <hr />
                   <Nav.Link href="/ContactUs">Developer</Nav.Link>
                   <hr />
