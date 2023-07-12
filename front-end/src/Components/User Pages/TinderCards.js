@@ -1,23 +1,22 @@
-import React, { useState, useMemo, useRef, useEffect} from "react";
+import React, { useState, useMemo, useRef} from "react";
 import TinderCard from "react-tinder-card";
 import "./TinderCard.css";
 import SwipeButtons from "./SwipeButtons";
-// import { IconButton } from "@mui/material";
-// import ReplayIcon from "@mui/icons-material/Replay";
-// import CloseIcon from "@mui/icons-material/Close";
+import { IconButton } from "@mui/material";
+import ReplayIcon from "@mui/icons-material/Replay";
+import CloseIcon from "@mui/icons-material/Close";
 import StarRateIcon from "@mui/icons-material/StarRate";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import FlashOnIcon from "@mui/icons-material/FlashOn";
 import axios from "axios";
 import { async } from "@firebase/util";
 import { useNavigate } from "react-router-dom";
-import Loader from './Loader';
+const API = process.env.REACT_APP_API_URL;
 
 
 export default function TinderCards({ animals }) {
   const [currentIndex, setCurrentIndex] = useState(animals.length - 1);
   const [lastDirection, setLastDirection] = useState();
-  const [loading, setLoading] = useState(true);
   const currentIndexRef = useRef(currentIndex);
   const navigate = useNavigate();
   const [changeSwipe, setChangeSwipe] = useState(false);
@@ -43,12 +42,7 @@ export default function TinderCards({ animals }) {
     userLiked: false,
     image_url: null,
   });
-  //<================ Loading Feature ================>
- useEffect(() => {
-  setLoading(false)
- } , []);
 
-  // <================ Loading Feature <================
   const [likedAnimals, setLikedAnimals] = useState([]);
 
   const childRefs = useMemo(
@@ -75,7 +69,7 @@ export default function TinderCards({ animals }) {
 
     if (direction === "right") {
       //new code - for swiping right, needs to change the userLiked part to true... since its liked now
-      // console.log(currentAnimal)
+      console.log(currentAnimal)
       
       updateAnimal({ ...animals[index], userLiked: true }, animals[index].id);
     } else if (direction === "left") {
@@ -130,7 +124,7 @@ export default function TinderCards({ animals }) {
 
   const updateAnimal = (newLikedAnimal, id) => {
     axios
-      .put(`https://pawster.onrender.com/pets/${id}`, newLikedAnimal)
+      .put(`{API}/pets/${id}`, newLikedAnimal)
       .then(
         (response) => {
           console.log(response);
@@ -163,19 +157,21 @@ export default function TinderCards({ animals }) {
                 <h3>
                   {animal.name} , {animal.breed}
                 </h3>
-      
+                
+              
+                {/* <p>{console.log(changeSwipe)}</p> */}
               </div>
-      
+              
             </div>
+
+            {/* Tinder Buttons */}
+            {/* <h3>{animal.description}</h3> */}
           </TinderCard>
-      
         );
       })}
-    
 
       <SwipeButtons/>
-    
-    
+
       {/* <div className="swipeButtons">
       {changeSwipe ? (<span>.</span> ) : (
          <span>,</span>
@@ -195,8 +191,9 @@ export default function TinderCards({ animals }) {
         <IconButton className="swipeButtons_lightning" size="small">
           <FlashOnIcon fontSize="large" />
         </IconButton>
-      </div>
-    </div> */}
+      </div> */}
+    </div>
     // </div>
   );
 }
+

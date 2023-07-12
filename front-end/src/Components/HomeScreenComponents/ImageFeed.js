@@ -9,6 +9,7 @@ import Carousel from "react-bootstrap/Carousel";
 import Nav from "react-bootstrap/Nav";
 
 
+
 function srcset(image, size, rows = 1, cols = 1) {
   return {
     src: `${image}?w=${size * cols}&h=${size * rows}&fit=crop&auto=format`,
@@ -43,7 +44,7 @@ export default function QuiltedImageList() {
       <div className="splash-image">
         {/* <h1>Find the right pet for you</h1> */}
        
-        <Carousel fade>
+        {/* <Carousel fade>
       <Carousel.Item interval={2000}>
         <img width="480px" height="320px" 
           className="first-image" 
@@ -155,7 +156,7 @@ export default function QuiltedImageList() {
 
        
       </Carousel.Item>
-    </Carousel>
+    </Carousel> */}
     <br/>
     <br/>
         {user && user.displayName ? (

@@ -135,7 +135,7 @@ export default function Account({ handleTextChange, handleNumberChange }) {
                                 </Form.Control>
                             </Form.Group>
                             <br></br>
-                            <Button type="submit" class="btn btn-">
+                            <Button type="submit" className="btn btn-">
                             <Nav.Link href="/user/1/explore">Submit</Nav.Link>
                             </Button>
                             <Button variant="warning">

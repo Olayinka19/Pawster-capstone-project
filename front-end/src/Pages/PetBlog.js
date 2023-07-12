@@ -9,8 +9,8 @@ function PetBlog() {
   return (
     <div className="Petblog">
 
-    <h2>Pets Adoption: A Guide to Bringing Home Your New Best Friend</h2>
-    <img width="700px" height="400px" className='blog' src="https://as2.ftcdn.net/v2/jpg/03/23/07/05/1000_F_323070505_wA0OTjOfdHe4cQ66PsplE1Zj8xzdR6hE.jpg"></img>
+    <h2>Pets Store and Adoption: A Guide to Bringing Home Your New Best Friend</h2>
+    <img width="500px" height="400px" className='blog' src="https://as2.ftcdn.net/v2/jpg/03/23/07/05/1000_F_323070505_wA0OTjOfdHe4cQ66PsplE1Zj8xzdR6hE.jpg"></img>
     <div>
   <span style={{fontSize: '17px', fontWeight: 'bold'}}>  <h2>Adopting a pet is a wonderful experience </h2> that brings a new member into your family and enriches your life. With so many pets in need of loving homes, adoption is a great option for anyone looking to add a furry friend to their household.
   </span>

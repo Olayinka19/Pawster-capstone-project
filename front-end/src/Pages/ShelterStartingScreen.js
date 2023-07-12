@@ -7,12 +7,13 @@ import axios from 'axios';
 
 import EditPetForm from "../Components/Forms/EditPetForm";
 import ShowPage from "./ShelterPages/ShowPage";
-
+const API = process.env.REACT_APP_API_URL;
 
 export default function ShelterStartingScreen() {
     const [pets, setPets] = useState([]);
     const [shelterInfo, setShelterInfo ] = useState([]);
     const [usersData, setUsersData ] = useState([]);
+ 
 
     useEffect(() => {
       getPets();
@@ -21,7 +22,7 @@ export default function ShelterStartingScreen() {
     }, []);
   
     const getPets = async () => {
-      await axios.get(`https://pawster.onrender.com/pets`).then((res) => {
+      await axios.get(`{API}/pets`).then((res) => {
         const data = res.data
         console.log(data)
         setPets(data)
@@ -29,7 +30,7 @@ export default function ShelterStartingScreen() {
     }
 
     const getShelters = async () => {
-      await axios.get(`https://pawster.onrender.com/shelters`).then((res) => {
+      await axios.get(`{API}/shelters`).then((res) => {
         const data = res.data
         console.log(data)
         setShelterInfo(data)
@@ -37,7 +38,7 @@ export default function ShelterStartingScreen() {
     }
   
     const getUsers = async () => {
-      await axios.get(`https://pawster.onrender.com/users`).then((res) => {
+      await axios.get(`{API}/users`).then((res) => {
         const data = res.data
         console.log(data)
         setUsersData(data)
@@ -54,10 +55,10 @@ export default function ShelterStartingScreen() {
                     <Route path="/:id/show/:petId" element={ <ShowPage pets={pets} usersData={usersData}/>} />
                     <Route path="/:id/settings" element={ "<Settings />"} />
                 </Routes>
-        </ >
+        </>
     )
-
 }
+
 
 
 

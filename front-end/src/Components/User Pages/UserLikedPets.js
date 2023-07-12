@@ -5,7 +5,7 @@ import { Typography } from '@mui/material'
 import LikedPet from './LikedPet'
 import ViewPet from './ViewPet'
 import NoPetsPage from '../../Pages/ShelterPages/NoPetsPage'
-
+const API = process.env.REACT_APP_API_URL;
 
 function UserLikedPets() {
     //aixos get? from our data base - getting pets data. by userlikedby 
@@ -16,7 +16,7 @@ function UserLikedPets() {
 
 
     useEffect(() => {
-        axios.get(`https://pawster.onrender.com/pets`)
+        axios.get(`{API}/pets`)
             .then((res) => { setAllPets(res.data) })
             .catch((err) => { console.log(err) })
     }, [])

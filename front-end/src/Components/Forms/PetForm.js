@@ -9,7 +9,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from 'react-bootstrap';
 import { getPetType, getPetSize, getPetMaintenance, getPetAge, getGenderItems, getYesOrNo, getDeclawedItems, getAdoptionStatus } from "./selectValues/petsSelect"
 
-// const API = process.env.REACT_APP_API_URL;
+const API = process.env.REACT_APP_API_URL;
 
 export default function PetForm() {
     let { id } = useParams();
@@ -50,7 +50,7 @@ export default function PetForm() {
     const navigate = useNavigate()
 
     const createPet = async (petInfo) => {
-      await axios.post(`https://pawster.onrender.com/pets`, petInfo).then((res) => {
+      await axios.post(`{API}/pets`, petInfo).then((res) => {
         const data = res.data
         console.log(data)
        navigate(`/shelter/${id}`);

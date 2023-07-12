@@ -16,7 +16,7 @@ function Feed() {
             <h2>Who am I ?</h2>
             <br />
             <p>
-              I am a dedicated individuals, who is passionate about
+              I am a dedicated individual, who is passionate about
               helping pets currently placed in overpopulated shelters find a
               home. With my combined knowledge of full stack development, we
               created this app in hopes of allowing people interested in
